@@ -148,11 +148,21 @@ padding:100px 10%;
 }
 
 section h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:60px;
+    color:#fff;
+    position:relative;
+}
 
-text-align:center;
-font-size:40px;
-margin-bottom:50px;
-
+section h2::after{
+    content:"";
+    width:90px;
+    height:4px;
+    background:#38bdf8;
+    display:block;
+    margin:12px auto 0;
+    border-radius:5px;
 }
 
 .about p{
@@ -165,22 +175,32 @@ line-height:2;
 }
 
 .skill-grid{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-bottom:40px;
 }
 
 .card{
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,.08);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all .35s ease;
+    min-height: 200px;
 
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(15px);
-padding:40px;
-text-align:center;
-border-radius:20px;
-transition:.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(56,189,248,.25);
+    border-color: #38bdf8;
 }
 
 .card:hover{
@@ -190,11 +210,14 @@ transform:translateY(-10px);
 }
 
 .card i{
+    font-size:48px;
+    color:#38bdf8;
+    margin-bottom:18px;
+}
 
-font-size:50px;
-color:#38bdf8;
-margin-bottom:20px;
-
+.card h3{
+    font-size:22px;
+    line-height:1.4;
 }
 
 .project-grid{
