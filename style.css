@@ -220,27 +220,58 @@ transform:translateY(-10px);
     line-height:1.4;
 }
 
-.platform-grid{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-
+/* Section */
+.platform-section {
+    padding: 80px 10%;
+    background: #0f172a;
 }
 
-.platform{
-
-background:#1e293b;
-padding:30px;
-border-radius:20px;
-transition:.4s;
-
+.platform-section h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
 }
 
-.platform:hover{
+/* Grid */
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
 
-transform:scale(1.05);
+/* Card */
+.platform {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
+.platform:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: #38bdf8;
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.3);
+}
+
+.platform h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.platform h3 a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.platform h3 a:hover {
+    color: #38bdf8;
 }
 
 
