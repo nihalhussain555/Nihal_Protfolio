@@ -220,6 +220,30 @@ transform:translateY(-10px);
     line-height:1.4;
 }
 
+.platform-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
+}
+
+.platform{
+
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+transition:.4s;
+
+}
+
+.platform:hover{
+
+transform:scale(1.05);
+
+}
+
+
 .project-grid{
 
 display:grid;
