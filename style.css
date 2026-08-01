@@ -181,6 +181,29 @@ line-height:2;
     margin-bottom:40px;
 }
 
+/* Category Heading */
+.skill-category h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin: 50px 0 25px;   /* top right/left bottom */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* First heading should not have extra top margin */
+.skill-category:first-child h3 {
+    margin-top: 0;
+}
+
+.skills-grid {
+    margin-top: 15px;
+}
+
+.skill-category {
+    margin-bottom: 50px;
+}
+
 .card{
     background: rgba(255,255,255,.08);
     backdrop-filter: blur(15px);
