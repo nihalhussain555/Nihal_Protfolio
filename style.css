@@ -315,6 +315,7 @@ line-height:2;
     color:#fff;
     font-size:1.6rem;
     margin-bottom:10px;
+    white-space: nowrap;
 }
 
 .experience-left h4{
