@@ -165,12 +165,378 @@ section h2::after{
     border-radius:5px;
 }
 
-.about p{
+/*================ ABOUT =================*/
 
-max-width:700px;
-margin:auto;
-text-align:center;
-line-height:2;
+.about{
+    padding:90px 10%;
+    background:#0f172a;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:3.5rem;
+    color:#fff;
+    font-weight:700;
+}
+
+.section-title h2 span{
+    color:#38bdf8;
+}
+
+.section-title p{
+    max-width:850px;
+    margin:20px auto 0;
+    color:#94a3b8;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+/*================ Layout =================*/
+
+.about-container{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:50px;
+    align-items:start;
+}
+
+/*================ Journey =================*/
+
+.journey{
+    margin-bottom:35px;
+}
+
+.journey h3{
+    color:#fff;
+    font-size:2rem;
+    margin-bottom:25px;
+}
+
+.journey p{
+    color:#cbd5e1;
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:22px;
+}
+
+/*================ Education =================*/
+
+.education-card{
+
+    background:#1e293b;
+
+    border-radius:18px;
+
+    border-left:5px solid #38bdf8;
+
+    padding:28px;
+
+    transition:.35s;
+
+}
+
+.education-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 30px rgba(56,189,248,.15);
+
+}
+
+.education-header{
+
+    display:flex;
+
+    gap:22px;
+
+}
+
+.education-icon{
+
+    width:65px;
+    height:65px;
+
+    background:#334155;
+
+    border-radius:16px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#38bdf8;
+
+    font-size:28px;
+
+    flex-shrink:0;
+
+}
+
+.education-content{
+
+    width:100%;
+
+}
+
+.education-content h3{
+
+    color:#fff;
+
+    margin-bottom:8px;
+
+    font-size:1.5rem;
+
+}
+
+.education-content h4{
+
+    color:#38bdf8;
+
+    margin-bottom:8px;
+
+}
+
+.education-content p{
+
+    color:#d1d5db;
+
+    margin-bottom:6px;
+
+}
+
+.education-content span{
+
+    color:#94a3b8;
+
+}
+
+.education-bottom{
+
+    margin-top:22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    gap:25px;
+
+}
+
+.education-left-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.education-left-info span{
+
+    color:#94a3b8;
+
+    font-size:15px;
+
+}
+
+.education-left-info i{
+
+    color:#38bdf8;
+
+    margin-right:8px;
+
+}
+
+.education-right-info{
+
+    text-align:center;
+
+    min-width:120px;
+
+}
+
+.education-right-info h5{
+
+    color:#38bdf8;
+
+    font-size:18px;
+
+    margin-bottom:8px;
+
+}
+
+.education-right-info h2{
+
+    color:#fff;
+
+    font-size:2.5rem;
+
+}
+
+/*================ Stats =================*/
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    margin-bottom:25px;
+
+}
+
+.stat-card{
+
+    background:#1e293b;
+
+    border-radius:18px;
+
+    border:1px solid #334155;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    transition:.35s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 30px rgba(56,189,248,.15);
+
+}
+
+.stat-card h2{
+
+    color:#38bdf8;
+
+    font-size:2.4rem;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:#cbd5e1;
+
+}
+
+/*================ Achievements =================*/
+
+.achievement-card{
+
+    background:#1e293b;
+
+    border-radius:18px;
+
+    border:1px solid #334155;
+
+    padding:30px;
+
+    transition:.35s;
+
+}
+
+.achievement-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 30px rgba(56,189,248,.15);
+
+}
+
+.achievement-card h3{
+
+    color:#fff;
+
+    font-size:1.7rem;
+
+    margin-bottom:22px;
+
+}
+
+.achievement-card h3 i{
+
+    color:#38bdf8;
+
+    margin-right:10px;
+
+}
+
+.achievement-card ul{
+
+    padding-left:22px;
+
+}
+
+.achievement-card li{
+
+    color:#cbd5e1;
+
+    margin-bottom:15px;
+
+    line-height:1.8;
+
+}
+
+/*================ Responsive =================*/
+
+@media(max-width:1000px){
+
+.about-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.education-bottom{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.education-right-info{
+
+text-align:left;
+
+}
+
+.section-title h2{
+
+font-size:2.5rem;
+
+}
+
+.journey h3{
+
+font-size:1.8rem;
+
+}
 
 }
 
