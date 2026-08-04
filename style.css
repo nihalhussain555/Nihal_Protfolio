@@ -784,58 +784,219 @@ transform:translateY(-10px);
     line-height:1.4;
 }
 
-/* Section */
-.platform-section {
-    padding: 80px 10%;
-    background: #0f172a;
+/* ===========================
+   PLATFORM SECTION
+=========================== */
+
+.platform-section{
+    padding:80px 8%;
 }
 
-.platform-section h2 {
-    text-align: center;
-    color: #ffffff;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
+.platform-section h2{
+    text-align:center;
+    font-size:2.5rem;
+    color:#fff;
+    margin-bottom:50px;
 }
 
-/* Grid */
-.platform-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+/* ===========================
+   GRID
+=========================== */
+
+.platform-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:30px;
 }
 
-/* Card */
-.platform {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    border: 2px solid transparent;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+/* ===========================
+   CARD
+=========================== */
+
+.platform-card{
+    background:#1e293b;
+    padding:28px;
+    border-radius:20px;
+    border:2px solid transparent;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    transition:all .35s ease;
+    color:#fff;
 }
 
-.platform:hover {
-    transform: translateY(-10px) scale(1.03);
-    border-color: #38bdf8;
-    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.3);
+.platform-card:hover{
+    transform:translateY(-8px);
+    border-color:#38bdf8;
+    box-shadow:0 18px 35px rgba(56,189,248,.25);
 }
 
-.platform h3 {
-    color: #ffffff;
-    font-size: 1.5rem;
-    margin: 0;
+/* ===========================
+   HEADER
+=========================== */
+
+.platform-header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:25px;
 }
 
-.platform h3 a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
+.platform-icon{
+    width:65px;
+    height:65px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.platform h3 a:hover {
-    color: #38bdf8;
+.platform-icon img{
+    width:35px;
+    height:35px;
+    object-fit:contain;
+}
+
+.platform-info h3{
+    margin:0;
+    font-size:1.7rem;
+    color:#fff;
+}
+
+.platform-info span{
+    color:#94a3b8;
+    font-size:15px;
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+.platform-body{
+    margin:25px 0;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:18px 0;
+}
+
+.row span{
+    color:#94a3b8;
+    font-size:16px;
+}
+
+.row strong{
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.profile-btn{
+    display:block;
+    text-align:center;
+    padding:15px;
+    text-decoration:none;
+    border-radius:12px;
+    background:#0f172a;
+    color:#fff;
+    border:1px solid #334155;
+    font-weight:600;
+    transition:.3s;
+}
+
+.profile-btn:hover{
+    background:#38bdf8;
+    color:#0f172a;
+    border-color:#38bdf8;
+}
+
+/* ===========================
+   ICON BACKGROUNDS
+=========================== */
+
+.lc{
+    background:#ff9800;
+}
+
+.cc{
+    background:#ec4899;
+}
+
+.cf{
+    background:#38bdf8;
+}
+
+.hr{
+    background:#22c55e;
+}
+
+.gfg{
+    background:#14b86a;
+}
+
+.git{
+    background:#24292f;
+}
+
+.codolio{
+    background:#a855f7;
+}
+
+/* ===========================
+   TEXT COLORS
+=========================== */
+
+.orange{
+    color:#f59e0b !important;
+}
+
+.blue{
+    color:#38bdf8 !important;
+}
+
+.green{
+    color:#22c55e !important;
+}
+
+.pink{
+    color:#ec4899 !important;
+}
+
+.purple{
+    color:#a855f7 !important;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .platform-grid{
+        grid-template-columns:1fr;
+    }
+
+    .platform-card{
+        padding:22px;
+    }
+
+    .platform-info h3{
+        font-size:1.4rem;
+    }
+
+    .row{
+        font-size:15px;
+    }
+
+    .profile-btn{
+        padding:13px;
+    }
+
 }
 
 
