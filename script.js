@@ -78,3 +78,22 @@ section.classList.add("active");
 });
 
 });
+
+// ===============================
+// EXPERIENCE ACCORDION
+// ===============================
+
+document.querySelectorAll(".experience-header").forEach(header => {
+
+    header.addEventListener("click", () => {
+
+        const card = header.parentElement;
+        const content = card.querySelector(".experience-content");
+        const button = card.querySelector(".toggle-btn");
+
+        content.classList.toggle("active");
+        button.classList.toggle("active");
+
+    });
+
+});

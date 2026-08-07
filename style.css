@@ -590,6 +590,10 @@ font-size:1.8rem;
 
 /* ================= EXPERIENCE ================= */
 
+/*=============================
+    EXPERIENCE SECTION
+==============================*/
+
 .experience{
     padding:80px 10%;
     background:#0f172a;
@@ -602,69 +606,289 @@ font-size:1.8rem;
     margin-bottom:50px;
 }
 
+/*=============================
+    CARD
+==============================*/
+
 .experience-card{
-    display:flex;
-    justify-content:space-between;
-    gap:50px;
     background:#1e293b;
-    padding:35px;
     border-radius:18px;
     border-left:5px solid #38bdf8;
-    transition:.3s ease;
+    overflow:hidden;
+    transition:.35s ease;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
 .experience-card:hover{
     transform:translateY(-5px);
-    box-shadow:0 12px 25px rgba(56,189,248,.2);
+    box-shadow:0 15px 35px rgba(56,189,248,.18);
 }
 
-.experience-left{
-    width:30%;
+/*=============================
+    HEADER
+==============================*/
+
+.experience-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:30px;
+    cursor:pointer;
 }
 
-.experience-left h3{
+.experience-info h3{
     color:#fff;
-    font-size:1.6rem;
-    margin-bottom:10px;
-    white-space: nowrap;
+    font-size:2rem;
+    margin-bottom:15px;
 }
 
-.experience-left h4{
+.company{
+    display:flex;
+    align-items:center;
+    gap:10px;
     color:#38bdf8;
-    font-size:1.2rem;
-    margin-bottom:10px;
+    font-size:1.15rem;
+    font-weight:600;
+    margin-bottom:18px;
 }
 
-.duration{
-    color:#94a3b8;
-    font-size:1rem;
+.company i{
+    font-size:18px;
 }
 
-.experience-right{
-    width:70%;
+.experience-meta{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.experience-right ul{
-    margin:0;
-    padding-left:20px;
+.experience-meta span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    background:#0f172a;
+
+    color:#cbd5e1;
+
+    padding:10px 16px;
+
+    border-radius:25px;
+
+    font-size:14px;
 }
 
-.experience-right li{
+.experience-meta i{
+    color:#38bdf8;
+}
+
+/*=============================
+    RIGHT SIDE
+==============================*/
+
+.experience-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.status{
+    background:#334155;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:25px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.toggle-btn{
+    width:45px;
+    height:45px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#334155;
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.toggle-btn:hover{
+    background:#38bdf8;
+    color:#0f172a;
+}
+
+.toggle-btn i{
+    transition:.35s;
+}
+
+/* Rotate Arrow */
+
+.toggle-btn.active i{
+    transform:rotate(180deg);
+}
+
+/*=============================
+    CONTENT
+==============================*/
+
+.experience-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .5s ease;
+
+    padding:0 30px;
+}
+
+.experience-content.active{
+    max-height:900px;
+    padding:0 30px 30px;
+}
+
+.experience-content hr{
+    border:none;
+    border-top:1px solid #334155;
+    margin:0 0 30px;
+}
+
+/*=============================
+    SECTION
+==============================*/
+
+.experience-section{
+    margin-bottom:35px;
+}
+
+.experience-section h4{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color:#fff;
+
+    font-size:1.3rem;
+
+    margin-bottom:18px;
+}
+
+.experience-section h4 i{
+
+    width:40px;
+    height:40px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#334155;
+
+    color:#38bdf8;
+
+    border-radius:10px;
+}
+
+.experience-section ul{
+
+    padding-left:22px;
+}
+
+.experience-section li{
+
     color:#d1d5db;
-    line-height:1.8;
-    margin-bottom:12px;
+
+    line-height:1.9;
+
+    margin-bottom:16px;
+
+    font-size:15px;
 }
 
-@media (max-width:768px){
+/*=============================
+    TECH STACK
+==============================*/
 
-    .experience-card{
+.tech-stack{
+
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:12px;
+}
+
+.tech-stack span{
+
+    background:#0f172a;
+
+    color:#cbd5e1;
+
+    border:1px solid #334155;
+
+    padding:9px 16px;
+
+    border-radius:25px;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.tech-stack span:hover{
+
+    background:#38bdf8;
+
+    color:#0f172a;
+
+    transform:translateY(-3px);
+}
+
+/*=============================
+    RESPONSIVE
+==============================*/
+
+@media(max-width:768px){
+
+    .experience{
+
+        padding:70px 5%;
+    }
+
+    .experience-header{
+
         flex-direction:column;
+
+        gap:25px;
     }
 
-    .experience-left,
-    .experience-right{
+    .experience-actions{
+
         width:100%;
+
+        justify-content:space-between;
     }
+
+    .experience-info h3{
+
+        font-size:1.6rem;
+    }
+
+    .experience-meta{
+
+        flex-direction:column;
+
+        gap:12px;
+    }
+
+    .experience-meta span{
+
+        width:fit-content;
+    }
+
 }
 
 /* Category Heading */
