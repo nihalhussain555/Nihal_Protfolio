@@ -70,6 +70,302 @@ color:#38bdf8;
 
 }
 
+/* ================= THEME SWITCH ================= */
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.switch {
+    width: 50px;
+    height: 26px;
+
+    background: #1e293b;
+
+    border: 1px solid #475569;
+
+    border-radius: 30px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.switch span {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+
+    top: 2px;
+    left: 3px;
+
+    background: #38bdf8;
+
+    border-radius: 50%;
+
+    transition: .3s ease;
+}
+
+
+/* Switch ON */
+/* ================= THEME SWITCH ================= */
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.switch {
+    width: 52px;
+    height: 28px;
+
+    background: #ffffff;
+
+    border: 2px solid #36454f;
+
+    border-radius: 30px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.switch span {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+
+    top: 2px;
+    left: 3px;
+
+    background: #36454f;
+
+    border-radius: 50%;
+
+    transition: 0.3s ease;
+}
+
+
+/* ================= CHARCOAL MODE SWITCH ================= */
+
+/* ================= THEME BUTTON ================= */
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#themeToggle {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #475569;
+    border-radius: 50%;
+
+    background: #1e293b;
+    color: #f8fafc;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#themeToggle:hover {
+    transform: scale(1.08);
+}
+
+
+/* WHITE + CHARCOAL MODE */
+
+body.bw-mode #themeToggle {
+    background: #ffffff;
+    color: #36454f;
+    border-color: #36454f;
+}
+
+
+/* =====================================================
+   PURE WHITE + CHARCOAL THEME
+===================================================== */
+
+body.bw-mode {
+    background: #ffffff;
+    color: #36454f;
+}
+
+
+/* Sections */
+
+body.bw-mode section {
+    background: #ffffff !important;
+    color: #36454f;
+}
+
+
+/* Headings */
+
+body.bw-mode h1,
+body.bw-mode h2,
+body.bw-mode h3,
+body.bw-mode h4 {
+    color: #36454f;
+}
+
+
+/* Paragraphs */
+
+body.bw-mode p,
+body.bw-mode li {
+    color: #5b6770;
+}
+
+
+/* Cards */
+
+body.bw-mode .project,
+body.bw-mode .experience-card,
+body.bw-mode .stat-card,
+body.bw-mode .achievement-card,
+body.bw-mode .achievement-cta,
+body.bw-mode .platform,
+body.bw-mode .education-card {
+    background: #ffffff;
+    color: #36454f;
+
+    border-color: #36454f;
+
+    box-shadow: 0 8px 25px rgba(54, 69, 79, 0.10);
+}
+
+
+/* Card headings */
+
+body.bw-mode .project h3,
+body.bw-mode .project h4,
+body.bw-mode .experience-left h3,
+body.bw-mode .experience-left h4,
+body.bw-mode .achievement-content h3,
+body.bw-mode .stat-card h3,
+body.bw-mode .stat-card h4 {
+    color: #36454f;
+}
+
+
+/* Secondary text */
+
+body.bw-mode .experience-right li,
+body.bw-mode .achievement-content p,
+body.bw-mode .stat-card p,
+body.bw-mode .achievement-year,
+body.bw-mode .achievement-header p {
+    color: #5b6770;
+}
+
+
+/* Icons */
+
+body.bw-mode .achievement-icon,
+body.bw-mode .icon {
+    background: #36454f;
+    color: #ffffff;
+}
+
+
+/* Tags */
+
+body.bw-mode .tech span,
+body.bw-mode .achievement-tags span,
+body.bw-mode .achievement-category {
+    background: #ffffff;
+    color: #36454f;
+    border-color: #36454f;
+}
+
+
+/* Buttons */
+
+body.bw-mode .buttons a {
+    background: #36454f;
+    color: #ffffff;
+    border-color: #36454f;
+}
+
+
+/* Button hover */
+
+body.bw-mode .buttons a:hover {
+    background: #ffffff;
+    color: #36454f;
+    border-color: #36454f;
+}
+
+
+/* Links */
+
+body.bw-mode a {
+    color: #36454f;
+}
+
+
+/* Blue accents become charcoal */
+
+body.bw-mode .achievements-header h2 span,
+body.bw-mode .stat-card h3,
+body.bw-mode .achievement-category,
+body.bw-mode .experience-left h4 {
+    color: #36454f;
+}
+
+
+/* Borders / hover */
+
+body.bw-mode .project:hover,
+body.bw-mode .achievement-card:hover,
+body.bw-mode .stat-card:hover {
+    border-color: #36454f;
+    box-shadow: 0 15px 30px rgba(54, 69, 79, 0.15);
+}
+
+
+/* Navbar */
+
+body.bw-mode nav {
+    background: #ffffff;
+    border-bottom: 1px solid #36454f;
+}
+
+body.bw-mode nav a {
+    color: #36454f;
+}
+
+body.bw-mode nav a:hover {
+    color: #000000;
+}
+
 .menu{
 
 display:none;

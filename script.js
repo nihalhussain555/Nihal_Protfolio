@@ -97,3 +97,26 @@ document.querySelectorAll(".experience-header").forEach(header => {
     });
 
 });
+
+// ================= BLACK & WHITE THEME =================
+
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("bw-mode");
+
+    if (document.body.classList.contains("bw-mode")) {
+
+        // White + charcoal mode
+        themeIcon.textContent = "☀️";
+
+    } else {
+
+        // Dark mode
+        themeIcon.textContent = "🌙";
+
+    }
+
+});
