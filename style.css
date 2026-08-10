@@ -1836,13 +1836,17 @@ height:250px;
 /* ================= STATS ================= */
 
 .achievement-stats {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
     gap: 20px;
     margin-bottom: 50px;
 }
 
 .stat-card {
+    width: 200px;
+    min-height: 130px;
+
     padding: 28px 18px;
     text-align: center;
 
