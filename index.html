@@ -1,1311 +1,1773 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nihal Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <title>Nihal Hussain | AI & Mern Stack Developer</title>
 
-<link
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-rel="stylesheet">
-<link rel="stylesheet" href="https://cloudflare.com">
+    <meta
+        name="description"
+        content="Nihal Hussain - Computer Science student, AI/ML enthusiast and Mern Stack Developer."
+    >
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
 
-    <nav>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
 
-    <div class="logo">
-        <a href="#home">Nihal Hussain</a>
-    </div>
+    <!-- ================= NAVBAR ================= -->
 
-    <ul class="nav-links">
+    <header id="header">
 
-    <!-- <li><a href="#home">Home</a></li> -->
+        <nav class="navbar">
 
-    <li><a href="#about">About</a></li>
+            <a href="#home" class="logo">
+                NH<span>.</span>
+            </a>
 
-    <li><a href="#experience">Experience</a></li>
+            <ul class="nav-links">
 
-    <li><a href="#projects">Projects</a></li>
-    
-    <li><a href="#skills">Skills</a></li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
 
-    <li><a href="#platforms">Platforms</a></li>
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
 
-    <li><a href="#achievements">Achievements</a></li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
 
-    <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
 
-    <!-- Theme Switch -->
-    <div class="theme-switch">
-        <button id="themeToggle" aria-label="Toggle theme">
-            <span id="themeIcon">☀️</span>
-        </button>
-    </div>
+                <li>
+                    <a href="#platforms">Platforms</a>
+                </li>
 
-    </ul>
+                <li>
+                    <a href="#achievements">Achievements</a>
+                </li>
 
-    <div class="menu">
-    <i class="fas fa-bars"></i>
-    </div>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
 
-    </nav>
+            </ul>
 
-    </header>
+            <div class="nav-actions">
 
-    <section class="hero" id="home">
+                <button
+                    id="themeToggle"
+                    class="theme-toggle"
+                    aria-label="Toggle theme"
+                >
+                    <i class="fas fa-moon"></i>
+                </button>
 
-    <div class="hero-content">
-
-    <h3>Hello, I'm</h3>
-
-    <h1>Nihal Hussain</h1>
-
-    <h2><span class="typing"></span></h2>
-
-    <p>
-    Creative Front-End Developer passionate about building beautiful websites.
-    </p>
-
-    <div class="buttons">
-
-             <a href="assets/NIHAL HUSSAIN RESUME 4.pdf" target="_blank" rel="noopener noreferrer">
-                📄 Download CV
-             </a>
-
-            <a href="#contact">Hire Me</a>
-
-        </div>
-
-    </div>
-
-    <div class="hero-image">
-
-    <img src="images/nihalpps.jpeg">
-
-    </div>
-
-    </section>
-
-    <section class="about reveal" id="about">
-
-    <div class="section-title">
-        <h2>About <span>Me</span></h2>
-
-        <p>
-            Passionate software engineer with a strong foundation in computer science and
-            hands-on experience in full-stack development and Artificial Intelligence.
-        </p>
-    </div>
-
-    <div class="about-container">
-
-        <!-- ================= LEFT SIDE ================= -->
-
-        <div class="about-left">
-
-            <div class="journey">
-
-                <h3>My Journey</h3>
-
-                <p>
-                    I'm currently pursuing my Bachelor's degree in Computer Science
-                    Engineering with a strong interest in Artificial Intelligence,
-                    Machine Learning, Full Stack Development, and Cloud Computing.
-                    I enjoy building real-world software solutions and continuously
-                    improving my technical skills through projects and hands-on learning.
-                </p>
-
-                <p>
-                    During my Artificial Intelligence Internship at Decode Labs,
-                    I developed multiple AI-based applications including an
-                    AI Rule-Based Chatbot, AI Recommendation System, and
-                    AI Data Classification Model. I enjoy solving complex
-                    problems and exploring modern technologies.
-                </p>
-
-            </div>
-
-            <!-- Education -->
-
-            <div class="education-card">
-
-                <div class="education-header">
-
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-
-                    <div class="education-content">
-
-                        <h3>Education</h3>
-
-                        <h4>B.E. Computer Science & Engineering</h4>
-
-                        <p>KALAIGNARKARUNANIDHI INSTITUTE OF TECHNOLOGY</p>
-
-                        <span>
-                            Bachelor of Engineering
-                        </span>
-
-                        <div class="education-bottom">
-
-                            <div class="education-left-info">
-
-                                <span>
-                                    <i class="fas fa-calendar-alt"></i>
-                                    2024 – Present
-                                </span>
-
-                                <span>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Coimbatore, Tamil Nadu
-                                </span>
-
-                            </div>
-
-                            <!-- <div class="education-right-info">
-
-                                <h5>CGPA</h5>
-
-                                <h2>8.75</h2>
-
-                            </div> -->
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- ================= RIGHT SIDE ================= -->
-
-        <div class="about-right">
-
-            <div class="stats-grid">
-
-                <div class="stat-card">
-                    <h2>8.42</h2>
-                    <p>CGPA</p>
-                </div>
-
-                <div class="stat-card">
-                    <h2>1200+</h2>
-                    <p>DSA Problems</p>
-                </div>
-
-                <div class="stat-card">
-                    <h2>1756</h2>
-                    <p>LeetCode Rating</p>
-                </div>
-
-                <div class="stat-card">
-                    <h2>1</h2>
-                    <p>AI Internship</p>
-                </div>
-
-            </div>
-
-            <!-- Achievements -->
-
-            <div class="about-achievement-card">
-
-                <h3>
-
-                    <i class="fas fa-award"></i>
-
-                    Key Achievements
-
-                </h3>
-
-                <ul>
-
-                    <li>Completed 1-Month Artificial Intelligence Internship at Decode Labs.</li>
-
-                    <li>Solved 1200+ DSA problems across LeetCode, GFG and CodingNinjas.</li>
-
-                    <li>Solved 2700+ problems, participated in 280+ coding contests, and maintained a 560+ day coding streak.</li>
-
-                    <li>Achieved a 5-star rating on HackerRank, reflecting proficiency in problem-solving and core programming concepts.</li>
-
-                    <!-- <li>Built Full Stack MERN applications and AI projects.</li>
-
-                    <li>Passionate about AI, Web Development, and Cloud Computing.</li> -->
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-    <section class="experience reveal" id="experience">
-
-    <h2>Experience</h2>
-
-    <div class="experience-card">
-
-        <!-- Header -->
-
-        <div class="experience-header" onclick="toggleExperience()">
-
-            <div class="experience-info">
-
-                <h3>Artificial Intelligence Intern</h3>
-
-                <div class="company">
-
-                    <i class="fas fa-building"></i>
-
-                    <span>Decode Labs</span>
-
-                </div>
-
-                <div class="experience-meta">
-
-                    <span>
-                        <i class="fas fa-calendar-alt"></i>
-                        May 2026 - June 2026
-                    </span>
-
-                    <span>
-                        <i class="fas fa-location-dot"></i>
-                        Remote
-                    </span>
-
-                </div>
-
-            </div>
-
-            <div class="experience-actions">
-
-                <span class="status">
-                    ✔ Completed
-                </span>
-
-                <button class="toggle-btn" id="toggleBtn">
-
-                    <i class="fas fa-chevron-down"></i>
-
+                <button
+                    class="menu"
+                    id="menu"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                >
+                    <i class="fas fa-bars"></i>
                 </button>
 
             </div>
 
-        </div>
+        </nav>
 
-        <!-- Expandable Content -->
+    </header>
 
-        <div class="experience-content" id="experienceContent">
 
-            <hr>
+    <main>
 
-            <div class="experience-section">
+        <!-- ================= HERO ================= -->
 
-                <h4>
+        <section class="hero" id="home">
 
-                    <i class="fas fa-bolt"></i>
+            <div class="hero-grid"></div>
 
-                    Key Achievements
+            <div class="hero-orbit orbit-one"></div>
+            <div class="hero-orbit orbit-two"></div>
 
-                </h4>
+            <div class="hero-content reveal">
 
-                <ul>
-
-                    <li>
-                        Developed an AI Rule-Based Chatbot using Python to automate user interactions through predefined rules.
-                    </li>
-
-                    <li>
-                        Built an AI Recommendation System that provides personalized recommendations.
-                    </li>
-
-                    <li>
-                        Designed an AI Data Classification Model using Scikit-learn and machine learning techniques.
-                    </li>
-
-                    <li>
-                        Worked with Python, Pandas, NumPy, Flask, and AI models while collaborating with mentors.
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <div class="experience-section">
-
-                <h4>
-
-                    <i class="fas fa-code"></i>
-
-                    Tech Stack
-
-                </h4>
-
-                <div class="tech-stack">
-
-                    <span>Python</span>
-
-                    <span>Flask</span>
-
-                    <span>Pandas</span>
-
-                    <span>NumPy</span>
-
-                    <span>Scikit-learn</span>
-
-                    <span>Requests</span>
-
-                    <span>BeautifulSoup</span>
-
-                    <span>Hugging Face</span>
-
-                    <span>API Integration</span>
-
+                <div class="hero-label">
+                    <span class="status-dot"></span>
+                    AVAILABLE FOR OPPORTUNITIES
                 </div>
 
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-    <section class="projects reveal" id="projects">
-
-        <h2>Projects</h2>
-
-        <div class="project-grid">
-
-            <!-- Project Card 1 -->
-            <div class="project featured">
-
-                <span class="badge">Featured</span>
-
-                <div class="project-title">
-                    <div class="icon">◧</div>
-                    <h3>AI-Phishing Website</h3>
-                </div>
-
-                <p>
-                    An AI-powered phishing detection and fact verification platform that analyzes 
-                    suspicious URLs and verifies news or claims to protect users from online threats and misinformation.
-
+                <p class="hero-small">
+                    HELLO, I'M
                 </p>
 
-                <h4>Key Features:</h4>
+                <h1>
+                    Nihal
+                    <span>Hussain</span>
+                </h1>
 
-                <ul>
-                    <li>AI-based phishing URL detection</li>
-                    <li>Real-time fact verification</li>
-                    <li>Live threat analysis and reporting</li>
-                    <li>Responsive and user-friendly interface</li>
-                </ul>
+                <div class="hero-role">
 
+                    <span class="role-prefix">&gt;</span>
 
-                <h4>Technologies:</h4>
+                    <span class="typing"></span>
 
-                <div class="tech">
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>Grok LLM</span>
-                    <span>API Integration</span>
-                    <span>Hugging Face</span>
-                    <span>BeautifulSoup</span>
-                    <span>Requests</span>
-                    <span>MongoDB</span>
-                    <span>HTML</span>
-                    <span>Tailwind CSS</span>
+                    <span class="cursor">|</span>
+
                 </div>
 
-
-                <div class="buttons">
-                    <a href="https://ai-phishing-detector-tnlt.onrender.com/"  target="_blank" rel="noopener noreferrer" class="live">↗ Live Demo</a>
-                    <a href="https://github.com/nihalhussain555/AI-Phishing-Detector.git"  target="_blank" rel="noopener noreferrer" 
-                    class="source">Github</a>
-                </div>
-
-            </div>
-
-
-
-            <!-- Project Card 2 -->
-            <div class="project">
-
-                <div class="project-title">
-                    <div class="icon">▥</div>
-                    <h3>Portfolio Website</h3>
-                </div>
-
-                <p>
-                    A modern responsive portfolio website showcasing skills,
-                    projects, and professional experience.
+                <p class="hero-description">
+                    Computer Science student building AI-powered products,
+                    mern-stack applications and interactive digital experiences.
                 </p>
 
+                <div class="hero-buttons">
 
-                <h4>Key Features:</h4>
+                    <a
+                        href="assets/NIHAL HUSSAIN RESUME 4.pdf"
+                        target="_blank"
+                        class="primary-btn magnetic"
+                    >
+                        <span>Download CV</span>
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
 
-                <ul>
-                    <li>Responsive modern UI design</li>
-                    <li>Project showcase with Live Demo and GitHub links</li>
-                    <li>Animated sections and smooth scrolling</li>
-                    <li>Contact form integration</li>
-                </ul>
+                    <a
+                        href="#projects"
+                        class="secondary-btn magnetic"
+                    >
+                        Explore Work
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
 
-
-                <h4>Technologies:</h4>
-
-                <div class="tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
                 </div>
 
+                <div class="hero-socials">
 
-                <div class="buttons">
-                    <a href="#" class="live">↗ Live Demo</a>
-                    <a href="https://github.com/nihalhussain555/Nihal_Protfolio.git" target="_blank" rel="noopener noreferrer" class="source">Github</a>
-                </div>
+                    <a
+                        href="https://github.com/nihalhussain555"
+                        target="_blank"
+                        aria-label="GitHub"
+                    >
+                        <i class="fab fa-github"></i>
+                    </a>
 
-            </div>
+                    <a
+                        href="https://www.linkedin.com/in/nihal-hussain-555"
+                        target="_blank"
+                        aria-label="LinkedIn"
+                    >
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
 
+                    <a
+                        href="https://www.instagram.com/nihal_x5_____/?hl=en"
+                        target="_blank"
+                        aria-label="Instagram"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
 
-
-
-            <!-- Project Card 3 -->
-            <div class="project">
-
-                <div class="project-title">
-                    <div class="icon">▣</div>
-                    <h3>Clubs and Events Management System</h3>
-                </div>
-
-
-                <p>
-                    A comprehensive web-based platform for managing college clubs, events, 
-                    registrations, and announcements with dedicated admin and student portals.
-                </p>
-
-
-                <h4>Key Features:</h4>
-
-                <ul>
-                    <li> Club and event management</li>
-                    <li>Student registration and participation</li>
-                    <li>Admin dashboard with analytics</li>
-                    <li>Announcements and notifications</li>
-                </ul>
-
-
-                <h4>Technologies:</h4>
-
-                <div class="tech">
-                    <span>React.js</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                    <span>Tailwind CSS</span>
-                    <span>HTML</span>
-                </div>
-
-
-                <div class="buttons">
-                    <a href="#" class="live">↗ Live Demo</a>
-                    <a href="https://github.com/nihalhussain555/Campus_Clubs_Events_Management.git" target="_blank" rel="noopener noreferrer" 
-                    class="source">Github</a>
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-    <section class="skills reveal" id="skills">
-
-    <h2>Skills</h2>
-
-    <!-- Programming Languages -->
-    <h3 class="skill-category">💻Programming Languages</h3>
-    <div class="skill-grid">
-        <div class="card">
-            <i class="fas fa-code"></i>
-            <h3>C</h3>
-        </div>
-        <div class="card">
-            <i class="fab fa-python"></i>
-            <h3>Python</h3>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-code"></i>
-            <h3>C++</h3>
-        </div>
-
-        <div class="card">
-            <i class="fab fa-js"></i>
-            <h3>JavaScript</h3>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-database"></i>
-            <h3>SQL</h3>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-microchip"></i>
-            <h3>Go lang</h3>
-        </div>
-    </div>
-
-        <!-- Web Technologies -->
-        <h3 class="skill-category">🌐Web Technologies</h3>
-        <div class="skill-grid">
-            <div class="card">
-                <i class="fab fa-html5"></i>
-                <h3>HTML5</h3>
-            </div>
-
-            <div class="card">
-                <i class="fab fa-css3-alt"></i>
-                <h3>CSS3</h3>
-            </div>
-
-            <div class="card">
-                <i class="fab fa-react"></i>
-                <h3>React</h3>
-            </div>
-
-            <div class="card">
-                <i class="fab fa-node"></i>
-                <h3>Node</h3>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-database"></i>
-                <h3>MongoDB</h3>
-            </div>
-            <div class="card">
-                <i class="fas fa-server"></i>
-                <h3>Express</h3>
-            </div>
-        </div>
-
-        <!-- Core Computer Science -->
-        <h3 class="skill-category">📚Core Computer Science</h3>
-        <div class="skill-grid">
-            <div class="card">
-                <i class="fas fa-code"></i>
-                <h3>DSA</h3>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-cubes"></i>
-                <h3>OOPS</h3>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-database"></i>
-                <h3>DBMS</h3>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-desktop"></i>
-                <h3>Operating Systems</h3>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-network-wired"></i>
-                <h3>Computer Networks</h3>
-            </div>
-
-        </div>
-
-        <!-- AI / ML -->
-        <h3 class="skill-category">🤖AI / ML</h3>
-        <div class="skill-grid">
-            <div class="card">
-                <i class="fas fa-robot"></i>
-                <h3>Artificial Intelligence</h3>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-brain"></i>
-                <h3>Machine Learning</h3>
-            </div>
-        </div>
-        <div class="skill-grid">
-
-        <div class="card">
-            <i class="fas fa-chart-line"></i>
-            <h3>Deep Learning</h3>
-        </div>
-
-
-        <div class="card">
-            <i class="fas fa-comments"></i>
-            <h3>Natural Language Processing</h3>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-chart-bar"></i>
-            <h3>Pandas</h3>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-calculator"></i>
-            <h3>NumPy</h3>
-        </div>
-
-    <div class="card">
-        <i class="fas fa-project-diagram"></i>
-        <h3>Scikit-learn</h3>
-    </div>
-
-</div>
-        <!-- Tools -->
-        <h3 class="skill-category">🛠Tools</h3>
-        <div class="skill-grid">
-            <div class="card">
-                <i class="fab fa-git"></i>
-                <h3>Git</h3>
-            </div>
-
-            <div class="card">
-                <i class="fab fa-github"></i>
-                <h3>GitHub</h3>
-            </div>
-
-            <div class="card">
-                 <i class="fas fa-paper-plane"></i>
-                <h3>Postman</h3>
-         </div>
-         <div class="card">
-            <i class="fas fa-laptop-code"></i>
-            <h3>VS Code</h3>
-        </div>
-        </div>
-
-    </section>
-    <section class="platform-section reveal" id="platforms">
-        <h2>Global Platforms</h2>
-
-        <div class="platform-grid">
-
-            <!-- Codolio -->
-        <div class="platform-card">
-            <div class="platform-header">
-
-                <div class="platform-icon codolio">
-                    <!-- <img src="images/codolio2.png" alt="Codolio"> -->
-                     <i class="fa-solid fa-bolt"></i>
-                </div>
-
-                <div class="platform-info">
-                    <h3>Codolio</h3>
-                    <span>@NihalHussain</span>
                 </div>
 
             </div>
 
-            <div class="platform-body">
 
-                <div class="row">
-                    <span>Stats</span>
-                    <strong>Global Rank 2145</strong>
-                </div>
+            <!-- HERO VISUAL -->
 
-                <div class="row">
-                    <span>C-Score</span>
-                    <strong class="purple">769.65</strong>
-                </div>
+            <div class="hero-visual reveal">
 
-                <div class="row">
-                    <span>Problems</span>
-                    <strong class="purple">2720+ Solved</strong>
-                </div>
+                <div class="visual-ring ring-one"></div>
+                <div class="visual-ring ring-two"></div>
 
-            </div>
+                <div class="code-window">
 
-            <a href="https://codolio.com/profile/NihalHussain" target="_blank" class="profile-btn">
-                View Profile ↗
-            </a>
-        </div>
-            <!-- LeetCode -->
-            <div class="platform-card">
-                <div class="platform-header">
-                    <div class="platform-icon lc">
-                        <!-- <img src="images/leetcode.png" alt=""> -->
-                         <i class="fas fa-code"></i>
+                    <div class="window-header">
+
+                        <div class="window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span>developer</span>
+
                     </div>
 
-                    <div class="platform-info">
+                    <div class="code-content">
+
+                        <span class="line-number">01</span>
+                        <code>
+                            <span class="keyword">const</span>
+                            <span class="variable">developer</span> =
+                            {
+                        </code>
+
+                        <span class="line-number">02</span>
+                        <code class="indent">
+                            name:
+                            <span class="string">
+                                "Nihal Hussain"
+                            </span>,
+                        </code>
+
+                        <span class="line-number">03</span>
+                        <code class="indent">
+                            role:
+                            <span class="string">
+                                "AI Developer"
+                            </span>,
+                        </code>
+
+                        <span class="line-number">04</span>
+                        <code class="indent">
+                            stack:
+                            [
+                        </code>
+
+                        <span class="line-number">05</span>
+                        <code class="indent-two">
+                            <span class="string">"Python"</span>,
+                        </code>
+
+                        <span class="line-number">06</span>
+                        <code class="indent-two">
+                            <span class="string">"React"</span>,
+                        </code>
+
+                        <span class="line-number">07</span>
+                        <code class="indent-two">
+                            <span class="string">"Node.js"</span>
+                        </code>
+
+                        <span class="line-number">08</span>
+                        <code class="indent">
+                            ],
+                        </code>
+
+                        <span class="line-number">09</span>
+                        <code class="indent">
+                            passion:
+                            <span class="string">
+                                "Building"
+                            </span>
+                        </code>
+
+                        <span class="line-number">10</span>
+                        <code>
+                            };
+                        </code>
+
+                    </div>
+
+                </div>
+
+                <div class="floating-badge badge-ai">
+                    <i class="fas fa-brain"></i>
+                    AI / ML
+                </div>
+
+                <div class="floating-badge badge-web">
+                    <i class="fas fa-code"></i>
+                    MERN STACK
+                </div>
+
+            </div>
+
+            <div class="scroll-indicator">
+
+                <span>SCROLL TO EXPLORE</span>
+
+                <i class="fas fa-arrow-down"></i>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="section about reveal" id="about">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-number">01</span>
+                    <span class="section-label">ABOUT ME</span>
+                </div>
+
+                <h2>
+                    Turning ideas into
+                    <span>digital experiences.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p class="large-text">
+                        I'm a Computer Science Engineering student passionate
+                        about Artificial Intelligence, Machine Learning,
+                        Full Stack Development and building real-world
+                        software solutions.
+                    </p>
+
+                    <p>
+                        I enjoy taking complex problems and transforming them
+                        into simple, usable and visually engaging applications.
+                        My development journey combines problem solving,
+                        software engineering and experimentation with modern
+                        AI technologies.
+                    </p>
+
+                    <p>
+                        During my Artificial Intelligence internship at
+                        Decode Labs, I worked on AI-based applications including
+                        recommendation systems, data classification models
+                        and rule-based chatbots.
+                    </p>
+
+                    <div class="about-tags">
+
+                        <span>AI / ML</span>
+                        <span>MERN STACK</span>
+                        <span>PROBLEM SOLVING</span>
+                        <span>OPEN TO LEARN</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-stats">
+
+                    <div class="stat-box">
+
+                        <span class="stat-number">8.42</span>
+
+                        <span class="stat-title">
+                            CGPA
+                        </span>
+
+                        <span class="stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </span>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <span class="stat-number">1200+</span>
+
+                        <span class="stat-title">
+                            DSA PROBLEMS
+                        </span>
+
+                        <span class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </span>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <span class="stat-number">2700+</span>
+
+                        <span class="stat-title">
+                            TOTAL PROBLEMS
+                        </span>
+
+                        <span class="stat-icon">
+                            <i class="fas fa-terminal"></i>
+                        </span>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <span class="stat-number">1</span>
+
+                        <span class="stat-title">
+                            AI INTERNSHIP
+                        </span>
+
+                        <span class="stat-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Education -->
+
+            <div class="education-box">
+
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <div class="education-main">
+
+                    <span class="small-label">
+                        EDUCATION
+                    </span>
+
+                    <h3>
+                        B.E. Computer Science & Engineering
+                    </h3>
+
+                    <p>
+                        KALAIGNARKARUNANIDHI INSTITUTE OF TECHNOLOGY
+                    </p>
+
+                    <div class="education-meta">
+
+                        <span>
+                            <i class="fas fa-calendar"></i>
+                            2024 – Present
+                        </span>
+
+                        <span>
+                            <i class="fas fa-location-dot"></i>
+                            Coimbatore, Tamil Nadu
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="education-year">
+                    2024
+                    <span>PRESENT</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EXPERIENCE ================= -->
+
+        <section class="section experience reveal" id="experience">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-number">02</span>
+                    <span class="section-label">EXPERIENCE</span>
+                </div>
+
+                <h2>
+                    Where I've
+                    <span>learned by doing.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        2026
+                    </div>
+
+                    <div class="experience-card">
+
+                        <div class="experience-top">
+
+                            <div>
+
+                                <span class="experience-type">
+                                    INTERNSHIP
+                                </span>
+
+                                <h3>
+                                    Artificial Intelligence Intern
+                                </h3>
+
+                                <p class="company-name">
+                                    Decode Labs
+                                </p>
+
+                            </div>
+
+                            <button
+                                class="experience-toggle"
+                                aria-label="Expand experience"
+                            >
+                                <i class="fas fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="experience-meta">
+
+                            <span>
+                                <i class="fas fa-calendar"></i>
+                                May 2026 – June 2026
+                            </span>
+
+                            <span>
+                                <i class="fas fa-location-dot"></i>
+                                Remote
+                            </span>
+
+                            <span class="completed">
+                                <i class="fas fa-check"></i>
+                                Completed
+                            </span>
+
+                        </div>
+
+
+                        <div class="experience-details">
+
+                            <div class="detail-column">
+
+                                <h4>
+                                    <i class="fas fa-bolt"></i>
+                                    KEY ACHIEVEMENTS
+                                </h4>
+
+                                <ul>
+
+                                    <li>
+                                        Developed an AI Rule-Based Chatbot
+                                        using Python.
+                                    </li>
+
+                                    <li>
+                                        Built an AI Recommendation System
+                                        for personalized recommendations.
+                                    </li>
+
+                                    <li>
+                                        Designed an AI Data Classification
+                                        Model using Scikit-learn.
+                                    </li>
+
+                                    <li>
+                                        Worked with Python, Pandas, NumPy,
+                                        Flask and AI models.
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+
+                            <div class="detail-column">
+
+                                <h4>
+                                    <i class="fas fa-layer-group"></i>
+                                    TECH STACK
+                                </h4>
+
+                                <div class="tech-list">
+
+                                    <span>Python</span>
+                                    <span>Flask</span>
+                                    <span>Pandas</span>
+                                    <span>NumPy</span>
+                                    <span>Scikit-learn</span>
+                                    <span>Requests</span>
+                                    <span>BeautifulSoup</span>
+                                    <span>Hugging Face</span>
+                                    <span>API Integration</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section class="section projects reveal" id="projects">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-number">03</span>
+                    <span class="section-label">SELECTED WORK</span>
+                </div>
+
+                <h2>
+                    Things I've
+                    <span>built.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+
+                <article class="project-card featured-project">
+
+                    <div class="project-number">
+                        01
+                    </div>
+
+                    <div class="project-top">
+
+                        <span class="project-category">
+                            AI / SECURITY
+                        </span>
+
+                        <i class="fas fa-arrow-up-right-from-square project-arrow"></i>
+
+                    </div>
+
+                    <h3>
+                        AI-Phishing
+                        <span>Detector</span>
+                    </h3>
+
+                    <p>
+                        AI-powered phishing detection and fact verification
+                        platform that analyzes suspicious URLs and verifies
+                        news or claims.
+                    </p>
+
+                    <div class="project-features">
+
+                        <span>
+                            <i class="fas fa-check"></i>
+                            AI URL Detection
+                        </span>
+
+                        <span>
+                            <i class="fas fa-check"></i>
+                            Fact Verification
+                        </span>
+
+                        <span>
+                            <i class="fas fa-check"></i>
+                            Threat Analysis
+                        </span>
+
+                    </div>
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>MongoDB</span>
+                        <span>Hugging Face</span>
+                        <span>BeautifulSoup</span>
+                        <span>Grok LLM</span>
+                        <span>API Integration</span>
+                        <span>Requests</span>
+                        <span>HTML</span>
+                        <span>Tailwind CSS</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://ai-phishing-detector-tnlt.onrender.com/"
+                            target="_blank"
+                        >
+                            Live Demo
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                        <a
+                            href="https://github.com/nihalhussain555/AI-Phishing-Detector.git"
+                            target="_blank"
+                        >
+                            GitHub
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 2 -->
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        02
+                    </div>
+
+                    <div class="project-top">
+
+                        <span class="project-category">
+                            WEB DEVELOPMENT
+                        </span>
+
+                        <i class="fas fa-globe project-arrow"></i>
+
+                    </div>
+
+                    <h3>
+                        Portfolio
+                        <span>Website</span>
+                    </h3>
+
+                    <p>
+                        Modern responsive portfolio website designed to
+                        showcase projects, technical skills and professional
+                        experience.
+                    </p>
+
+                    <div class="project-features">
+
+                        <span>
+                            <i class="fas fa-check"></i>
+                            Responsive UI
+                        </span>
+
+                        <span>
+                            <i class="fas fa-check"></i>
+                            Animations
+                        </span>
+
+                        <span>
+                            <i class="fas fa-check"></i>
+                            Contact Form
+                        </span>
+
+                    </div>
+
+                    <div class="project-tech">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a href="#home">
+                            Preview
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                        <a
+                            href="https://github.com/nihalhussain555/Nihal_Protfolio.git"
+                            target="_blank"
+                        >
+                            GitHub
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 3 -->
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        03
+                    </div>
+
+                    <div class="project-top">
+
+                        <span class="project-category">
+                            MERN STACK
+                        </span>
+
+                        <i class="fas fa-users project-arrow"></i>
+
+                    </div>
+
+                    <h3>
+                        Clubs & Events
+                        <span>Management</span>
+                    </h3>
+
+                    <p>
+                        Mern-stack platform for managing college clubs,
+                        events, registrations, announcements and student
+                        participation.
+                    </p>
+
+                    <div class="project-features">
+
+                        <span>
+                            <i class="fas fa-check"></i>
+                            Club Management
+                        </span>
+
+                        <span>
+                            <i class="fas fa-check"></i>
+                            Event Registration
+                        </span>
+
+                        <span>
+                            <i class="fas fa-check"></i>
+                            Admin Dashboard
+                        </span>
+
+                    </div>
+
+                    <div class="project-tech">
+
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>HTML</span>
+                        <span>Tailwind CSS</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a href="#contact">
+                            Discuss
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                        <a
+                            href="https://github.com/nihalhussain555/Campus_Clubs_Events_Management.git"
+                            target="_blank"
+                        >
+                            GitHub
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section class="section skills reveal" id="skills">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-number">04</span>
+                    <span class="section-label">TECH STACK</span>
+                </div>
+
+                <h2>
+                    Tools I use to
+                    <span>build.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="skills-layout">
+
+                <div class="skill-category">
+
+                    <div class="skill-category-title">
+                        <span>01</span>
+                        <h3>Programming</h3>
+                    </div>
+
+                    <div class="skill-items">
+
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>C</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>C++</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>Go</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <div class="skill-category-title">
+                        <span>02</span>
+                        <h3>Web Technologies</h3>
+                    </div>
+
+                    <div class="skill-items">
+
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Express</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <div class="skill-category-title">
+                        <span>03</span>
+                        <h3>AI / Machine Learning</h3>
+                    </div>
+
+                    <div class="skill-items">
+
+                        <div class="skill-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Artificial Intelligence</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Machine Learning</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Deep Learning</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-language"></i>
+                            <span>NLP</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-table"></i>
+                            <span>Pandas</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-calculator"></i>
+                            <span>NumPy</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Scikit-learn</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <div class="skill-category-title">
+                        <span>04</span>
+                        <h3>Core CS & Tools</h3>
+                    </div>
+
+                    <div class="skill-items">
+
+                        <div class="skill-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span>DSA</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-cubes"></i>
+                            <span>OOPS</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>DBMS</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-desktop"></i>
+                            <span>Operating Systems</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Computer Networks</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Postman</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PLATFORMS ================= -->
+
+        <section class="section platforms reveal" id="platforms">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-number">05</span>
+                    <span class="section-label">CODING PROFILE</span>
+                </div>
+
+                <h2>
+                    My presence across
+                    <span>platforms.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="platform-grid">
+
+
+                <article class="platform-card">
+
+                    <div class="platform-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+
+                    <div class="platform-name">
+                        <h3>Codolio</h3>
+                        <span>@NihalHussain</span>
+                    </div>
+
+                    <div class="platform-stat">
+                        <span>GLOBAL RANK</span>
+                        <strong>2145</strong>
+                    </div>
+
+                    <div class="platform-stat">
+                        <span>C-SCORE</span>
+                        <strong>769.65</strong>
+                    </div>
+
+                    <div class="platform-stat">
+                        <span>PROBLEMS</span>
+                        <strong>2720+</strong>
+                    </div>
+
+                    <a
+                        href="https://codolio.com/profile/NihalHussain"
+                        target="_blank"
+                    >
+                        View Profile
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
+
+                <article class="platform-card">
+
+                    <div class="platform-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+
+                    <div class="platform-name">
                         <h3>LeetCode</h3>
                         <span>@Nihal_555</span>
                     </div>
-                </div>
 
-                <div class="platform-body">
-                    <div class="row">
-                        <span>Stats</span>
-                        <strong>850+ Problems Solved</strong>
+                    <div class="platform-stat">
+                        <span>PROBLEMS</span>
+                        <strong>850+</strong>
                     </div>
 
-                    <div class="row">
-                        <span>Rank</span>
-                        <strong class="orange">Knight</strong>
+                    <div class="platform-stat">
+                        <span>RANK</span>
+                        <strong>Knight</strong>
                     </div>
 
-                    <div class="row">
-                        <span>Max Rating</span>
-                        <strong class="orange">1874</strong>
-                    </div>
-                </div>
-
-                <a href="https://leetcode.com/u/Nihal_555" target="_blank" class="profile-btn">
-                    View Profile ↗
-                </a>
-            </div>
-
-            <!-- CodeChef -->
-            <div class="platform-card">
-                <div class="platform-header">
-                    <div class="platform-icon cc">
-                        <!-- <img src="images/codechef.png" alt=""> -->
-                         <i class="fas fa-trophy"></i>
+                    <div class="platform-stat">
+                        <span>MAX RATING</span>
+                        <strong>1874</strong>
                     </div>
 
-                    <div class="platform-info">
+                    <a
+                        href="https://leetcode.com/u/Nihal_555/"
+                        target="_blank"
+                    >
+                        View Profile
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
+
+                <article class="platform-card">
+
+                    <div class="platform-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <div class="platform-name">
                         <h3>CodeChef</h3>
-                        <span>@kit28csb106</span>
-                    </div>
-                </div>
-
-                <div class="platform-body">
-                    <div class="row">
-                        <span>Stats</span>
-                        <strong>900+ Problems Solved</strong>
+                        <span>Competitive Programming</span>
                     </div>
 
-                    <div class="row">
-                        <span>Rank</span>
-                        <strong class="pink">3★</strong>
+                    <div class="platform-stat">
+                        <span>CONTESTS</span>
+                        <strong>ACTIVE</strong>
                     </div>
 
-                    <div class="row">
-                        <span>Max Rating</span>
-                        <strong class="pink">1610</strong>
-                    </div>
-                </div>
-
-                <a href="https://www.codechef.com/users/kit28csb106" class="profile-btn" target="_blank">
-                    View Profile ↗
-                </a>
-            </div>
-
-            <!-- Codeforces -->
-            <div class="platform-card">
-                <div class="platform-header">
-                    <div class="platform-icon cf">
-                        <!-- <img src="images/codeforces.png" alt=""> -->
-                         <i class="fa-solid fa-sliders"></i>
+                    <div class="platform-stat">
+                        <span>DIVISION</span>
+                        <strong>DIV 3</strong>
                     </div>
 
-                    <div class="platform-info">
+                    <div class="platform-stat">
+                        <span>FOCUS</span>
+                        <strong>DSA</strong>
+                    </div>
+
+                    <a
+                        href="https://www.codechef.com/"
+                        target="_blank"
+                    >
+                        View Profile
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
+
+                <article class="platform-card">
+
+                    <div class="platform-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+
+                    <div class="platform-name">
                         <h3>Codeforces</h3>
-                        <span>@nihalhussain555</span>
-                    </div>
-                </div>
-
-                <div class="platform-body">
-                    <div class="row">
-                        <span>Stats</span>
-                        <strong>300+ Solved</strong>
+                        <span>Competitive Programming</span>
                     </div>
 
-                    <div class="row">
-                        <span>Rank</span>
-                        <strong class="blue">Newbie</strong>
+                    <div class="platform-stat">
+                        <span>FOCUS</span>
+                        <strong>Algorithms</strong>
                     </div>
 
-                    <div class="row">
-                        <span>Max Rating</span>
-                        <strong class="blue">1058</strong>
-                    </div>
-                </div>
-
-                <a href="https://codeforces.com/profile/nihalhussain555" class="profile-btn" target="_blank">
-                    View Profile ↗
-                </a>
-            </div>
-
-            <!-- HackerRank -->
-            <div class="platform-card">
-                <div class="platform-header">
-                    <div class="platform-icon hr">
-                        <!-- <img src="images/hackerrank.png" alt=""> -->
-                         <i class="fas fa-star"></i>
+                    <div class="platform-stat">
+                        <span>PROBLEMS</span>
+                        <strong>ACTIVE</strong>
                     </div>
 
-                    <div class="platform-info">
+                    <div class="platform-stat">
+                        <span>CONTESTS</span>
+                        <strong>ACTIVE</strong>
+                    </div>
+
+                    <a
+                        href="https://codeforces.com/"
+                        target="_blank"
+                    >
+                        View Profile
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
+
+                <article class="platform-card">
+
+                    <div class="platform-icon">
+                        <i class="fab fa-hackerrank"></i>
+                    </div>
+
+                    <div class="platform-name">
                         <h3>HackerRank</h3>
-                        <span>@kit28_24bcs106</span>
-                    </div>
-                </div>
-
-                <div class="platform-body">
-                    <div class="row">
-                        <span>Stars</span>
-                        <strong>5 ★</strong>
+                        <span>Problem Solving</span>
                     </div>
 
-                    <div class="row">
-                        <span>Badge</span>
-                        <strong class="green">Gold</strong>
+                    <div class="platform-stat">
+                        <span>RATING</span>
+                        <strong>5★</strong>
                     </div>
 
-                    <div class="row">
-                        <span>C++ / Problem solving</span>
-                        <strong class="green">5★</strong>
+                    <div class="platform-stat">
+                        <span>FOCUS</span>
+                        <strong>Programming</strong>
                     </div>
-                </div>
 
-                <a href="https://www.hackerrank.com/profile/kit28_24bcs106" class="profile-btn" target="_blank">
-                    View Profile ↗
-                </a>
+                    <div class="platform-stat">
+                        <span>STATUS</span>
+                        <strong>ACTIVE</strong>
+                    </div>
+
+                    <a
+                        href="https://www.hackerrank.com/"
+                        target="_blank"
+                    >
+                        View Profile
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </article>
+
             </div>
 
-        </div>
-    </section>
-    
-    <!-- ================= ACHIEVEMENTS SECTION ================= -->
+        </section>
 
-    <section class="achievements reveal" id="achievements">
 
-        <div class="achievements-container">
+        <!-- ================= ACHIEVEMENTS ================= -->
 
-            <!-- Section Heading -->
-            <div class="achievements-header">
+        <section class="section achievements reveal" id="achievements">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-number">06</span>
+                    <span class="section-label">ACHIEVEMENTS</span>
+                </div>
 
                 <h2>
-                    <span>Achievements</span> & Recognition
+                    Progress worth
+                    <span>sharing.</span>
                 </h2>
 
-                <p>
-                    A collection of my notable accomplishments in competitive programming,
-                    hackathons, and academic excellence.
-                </p>
-
             </div>
 
 
-            <!-- ================= STATS ================= -->
-             <center>
             <div class="achievement-stats">
 
-                <div class="stat-card">
-                    <h3>560+</h3>
-                    <h4>Day Coding Streak</h4>
-                    <p>Consistent Problem Solving</p>
+                <div>
+                    <strong>560+</strong>
+                    <span>DAY STREAK</span>
                 </div>
 
-                <div class="stat-card">
-                    <h3>1874</h3>
-                    <h4>LeetCode Rating</h4>
-                    <p>Programming</p>
+                <div>
+                    <strong>1874</strong>
+                    <span>LEETCODE RATING</span>
                 </div>
 
-                <div class="stat-card">
-                    <h3>1200+</h3>
-                    <h4>DSA Problems</h4>
-                    <p>Multiple Platforms</p>
+                <div>
+                    <strong>1200+</strong>
+                    <span>DSA PROBLEMS</span>
                 </div>
 
-                <div class="stat-card">
-                    <h3>8.42</h3>
-                    <h4>CGPA</h4>
-                    <p>Academic Performance</p>
+                <div>
+                    <strong>8.42</strong>
+                    <span>CGPA</span>
                 </div>
 
             </div>
 
-            </center>
-            <!-- ================= ACHIEVEMENT CARDS ================= -->
-             
+
             <div class="achievement-grid">
 
 
-                <!-- Card 1 -->
-                <div class="achievement-card featured">
+                <article class="achievement-card">
 
+                    <div class="achievement-number">
+                        01
+                    </div>
 
                     <div class="achievement-icon">
-                        🏆
+                        <i class="fas fa-trophy"></i>
                     </div>
 
-                    <div class="achievement-content">
+                    <span>COMPETITION · 2026</span>
 
-                        <div class="achievement-top">
+                    <h3>
+                        36-Hour Hackathon Participation
+                    </h3>
 
-                            <span class="achievement-category">
-                                Competition
-                            </span>
+                    <p>
+                        Participated in a 36-hour hackathon,
+                        collaborating with a team to develop
+                        a technology-based solution under
+                        challenging time constraints.
+                    </p>
 
-                            <span class="achievement-year">
-                                2026
-                            </span>
+                </article>
 
-                        </div>
 
-                        <h3>
-                            36-Hour Hackathon Participation
-                        </h3>
+                <article class="achievement-card">
 
-                        <p>
-                            Participated in a 36-hour hackathon, collaborating with
-                            a team to develop a technology-based solution under
-                            challenging time constraints.
-                        </p>
-
+                    <div class="achievement-number">
+                        02
                     </div>
-
-                </div>
-
-
-                <!-- Card 2 -->
-                <div class="achievement-card featured">
-
 
                     <div class="achievement-icon">
-                        🏅
+                        <i class="fas fa-medal"></i>
                     </div>
 
-                    <div class="achievement-content">
+                    <span>PROGRAMMING · 2026</span>
 
-                        <div class="achievement-top">
+                    <h3>
+                        LeetCode Achievement
+                    </h3>
 
-                            <span class="achievement-category">
-                                Programming
-                            </span>
+                    <p>
+                        Solved 850+ algorithmic and data structure
+                        problems on LeetCode while maintaining
+                        a strong coding streak.
+                    </p>
 
-                            <span class="achievement-year">
-                                2026
-                            </span>
+                </article>
 
-                        </div>
 
-                        <h3>
-                            LeetCode Achievement
-                        </h3>
+                <article class="achievement-card">
 
-                        <p>
-                            Solved 850+ algorithmic and data structure problems on 
-                            LeetCode while maintaining a 470+ day coding streak.
-                        </p>
-
+                    <div class="achievement-number">
+                        03
                     </div>
-
-                </div>
-
-
-                <!-- Card 3 -->
-                <div class="achievement-card">
 
                     <div class="achievement-icon">
-                        ⭐
+                        <i class="fas fa-star"></i>
                     </div>
 
-                    <div class="achievement-content">
+                    <span>PROGRAMMING · 2026</span>
 
-                        <div class="achievement-top">
+                    <h3>
+                        CodeChef Global Ranking
+                    </h3>
 
-                            <span class="achievement-category">
-                                Programming
-                            </span>
+                    <p>
+                        Participating in CodeChef Division 3
+                        contests and continuously improving
+                        problem-solving and competitive
+                        programming skills.
+                    </p>
 
-                            <span class="achievement-year">
-                                2026
-                            </span>
+                </article>
 
-                        </div>
 
-                        <h3>
-                            CodeChef Global Ranking
-                        </h3>
+                <article class="achievement-card">
 
-                        <p>
-                            Participating in CodeChef Division 3 contests and continuously 
-                            improving problem-solving and competitive programming skills.
-                        </p>
-
+                    <div class="achievement-number">
+                        04
                     </div>
-
-                </div>
-
-
-                <!-- Card 4 -->
-                <div class="achievement-card">
 
                     <div class="achievement-icon">
-                        &lt;/&gt;
+                        <i class="fas fa-code"></i>
                     </div>
 
-                    <div class="achievement-content">
+                    <span>PROGRAMMING · 2026</span>
 
-                        <div class="achievement-top">
+                    <h3>
+                        1200+ DSA Problems Solved
+                    </h3>
 
-                            <span class="achievement-category">
-                                Programming
-                            </span>
+                    <p>
+                        Solved 1200+ Data Structures and Algorithms
+                        problems across platforms including
+                        LeetCode, CodeChef, GFG and Codeforces.
+                    </p>
 
-                            <span class="achievement-year">
-                                2026
-                            </span>
+                </article>
 
-                        </div>
 
-                        <h3>
-                            1200+ DSA Problems Solved
-                        </h3>
+                <article class="achievement-card">
 
-                        <p>
-                            Solved 1200+ Data Structures and Algorithms
-                            problems across platforms including LeetCode,
-                            CodeChef, GFG and Codeforces.
-                        </p>
-
+                    <div class="achievement-number">
+                        05
                     </div>
-
-                </div>
-
-
-                <!-- Card 5 -->
-                <div class="achievement-card">
 
                     <div class="achievement-icon">
-                        👥
+                        <i class="fas fa-brain"></i>
                     </div>
 
-                    <div class="achievement-content">
+                    <span>PROJECT · 2026</span>
 
-                        <div class="achievement-top">
+                    <h3>
+                        AI Project Development
+                    </h3>
 
-                            <span class="achievement-category">
-                                Project
-                            </span>
+                    <p>
+                        Developed AI projects including chatbots,
+                        recommendation systems, data classification
+                        and an AI phishing detection platform.
+                    </p>
 
-                            <span class="achievement-year">
-                                2026
-                            </span>
+                </article>
 
-                        </div>
 
-                        <h3>
-                            AI Project Development
-                        </h3>
+                <article class="achievement-card featured-achievement">
 
-                        <p>
-                            Developed AI projects including chatbots, recommendation systems, 
-                            data classification, and an AI phishing detection & fact verification website.
-                        </p>
-
+                    <div class="achievement-number">
+                        06
                     </div>
 
-                </div>
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+
+                    <span>ACADEMIC · 2024-PRESENT</span>
+
+                    <h3>
+                        Academic Excellence
+                    </h3>
+
+                    <p>
+                        Maintaining a strong academic record throughout
+                        my Computer Science and Engineering degree while
+                        balancing technical projects and competitive
+                        programming.
+                    </p>
+
+                </article>
+
+            </div>
 
 
-                <!-- Card 6 -->
-                <div class="achievement-card featured">
+            <div class="collaboration-box">
 
-                    <span class="featured-badge">
-                        Featured
+                <div>
+
+                    <span class="section-label">
+                        LET'S BUILD SOMETHING
                     </span>
 
-                    <div class="achievement-icon">
-                        🎓
-                    </div>
+                    <h3>
+                        Ready to collaborate?
+                    </h3>
 
-                    <div class="achievement-content">
+                </div>
 
-                        <div class="achievement-top">
+                <a href="#contact" class="primary-btn">
+                    Start a Conversation
+                    <i class="fas fa-arrow-right"></i>
+                </a>
 
-                            <span class="achievement-category">
-                                Academic
-                            </span>
+            </div>
 
-                            <span class="achievement-year">
-                                2024-Present
-                            </span>
+        </section>
 
+
+        <!-- ================= CONTACT ================= -->
+
+        <section class="section contact reveal" id="contact">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-number">07</span>
+                    <span class="section-label">CONTACT</span>
+                </div>
+
+                <h2>
+                    Let's create
+                    <span>something.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-info">
+
+                    <p class="contact-intro">
+                        Have an idea, project or opportunity?
+                        Let's talk and build something useful
+                        together.
+                    </p>
+
+
+                    <a
+                        href="mailto:nihalhussain587@gmail.com"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-item-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
 
-                        <h3>
-                            Academic Excellence
-                        </h3>
-
-                        <p>
-                            Maintained a strong academic record throughout
-                            my Computer Science and Engineering degree while
-                            balancing technical projects and competitive
-                            programming.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ================= BOTTOM CTA ================= -->
-
-            <div class="achievement-cta">
-
-                <h3>Ready to Collaborate?</h3>
-
-                <p>
-                    I'm always excited to work on challenging projects and
-                    contribute to innovative solutions. Let's build something
-                    amazing together!
-                </p>
-
-                <div class="achievement-tags">
-
-                    <span>🏆 Proven Track Record</span>
-
-                    <span>&lt;/&gt; Strong Technical Skills</span>
-
-                    <span>🎯 Results-Driven</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-</section>
-
-    <section class="contact" id="contact">
-
-        <h2>Contact Me</h2>
-
-        <div class="contact-container">
-
-            <!-- Left Side -->
-            <div class="contact-info">
-
-                <h3>Let's Connect</h3>
-
-                <p>
-                    Whether you're looking for a developer, have a project idea,
-                    or simply want to connect, I'd love to hear from you.
-                </p>
-
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-
-                    <div>
-                        <h4>Email</h4>
-                        <span>nihalhussain587@gmail.com</span>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <i class="fas fa-phone"></i>
-
-                    <div>
-                        <h4>Phone</h4>
-                        <span>+91 9489870217</span>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-
-                    <div>
-                        <h4>Location</h4>
-                        <span>Coimbatore, Tamil Nadu, India</span>
-                    </div>
-                </div>
-
-                <h4 class="social-title">Connect on Social Media</h4>
-
-                <div class="social-icons">
-
-                    <a href="https://www.linkedin.com/in/nihal-hussain-555" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-
-                    <a href="https://github.com/nihalhussain555" target="_blank"><i class="fab fa-github"></i></a>
-
-                    <a href="https://www.instagram.com/nihal_x5_____/?hl=en"><i class="fab fa-instagram"></i></a>
-
-                </div>
-
-            </div>
-
-            <!-- Right Side -->
-            <div class="contact-form">
-
-                <h3>Send a Message</h3>
-
-                <form>
-
-                    <div class="input-row">
-
-                        <div class="input-box">
-                            <label>Name</label>
-                            <input type="text" placeholder="Your Name" required>
+                        <div>
+                            <span>EMAIL</span>
+                            <strong>
+                                nihalhussain587@gmail.com
+                            </strong>
                         </div>
 
-                        <div class="input-box">
-                            <label>Email</label>
-                            <input type="email" placeholder="your@email.com" required>
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <a
+                        href="tel:+919489870217"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-item-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+
+                        <div>
+                            <span>PHONE</span>
+                            <strong>
+                                +91 9489870217
+                            </strong>
+                        </div>
+
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-item-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <span>LOCATION</span>
+                            <strong>
+                                Coimbatore, Tamil Nadu
+                            </strong>
                         </div>
 
                     </div>
 
-                    <div class="input-box">
-                        <label>Subject</label>
-                        <input type="text" placeholder="What's this about?" required>
+
+                    <div class="social-links">
+
+                        <a
+                            href="https://github.com/nihalhussain555"
+                            target="_blank"
+                        >
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/nihal-hussain-555"
+                            target="_blank"
+                        >
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/nihal_x5_____/?hl=en"
+                            target="_blank"
+                        >
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
                     </div>
 
-                    <div class="input-box">
-                        <label>Message</label>
-                        <textarea rows="6" placeholder="Tell me about your project..." required></textarea>
-                    </div>
+                </div>
 
-                    <button type="submit">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Message
-                    </button>
 
-                </form>
+                <div class="contact-form-box">
+
+                    <form id="contactForm">
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label>Name</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Your name"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Email</label>
+
+                                <input
+                                    type="email"
+                                    placeholder="you@example.com"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Subject</label>
+
+                            <input
+                                type="text"
+                                placeholder="What would you like to discuss?"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Message</label>
+
+                            <textarea
+                                rows="6"
+                                placeholder="Tell me about your idea..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="primary-btn form-submit"
+                        >
+
+                            <span>Send Message</span>
+
+                            <i class="fas fa-paper-plane"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
-    <p>© 2026 Nihal Hussain | All Rights Reserved</p>
+        <div class="footer-logo">
+            NH<span>.</span>
+        </div>
+
+        <p>
+            Designed & built by Nihal Hussain
+        </p>
+
+        <span>
+            © 2026
+        </span>
 
     </footer>
 
+
     <script src="script.js"></script>
 
-    </body>
+</body>
+
 </html>
