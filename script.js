@@ -233,7 +233,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const words = [
             "AI / ML Engineer",
-            "Full Stack Developer",
             "MERN Developer",
             "Software Developer",
             "C++ Developer"
