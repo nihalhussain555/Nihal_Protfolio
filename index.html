@@ -1668,7 +1668,31 @@
 
                 <div class="contact-form-box">
 
-                    <form id="contactForm">
+                    <form
+                        id="contactForm"
+                        action="https://formsubmit.co/93a373e2be9e5833bda9c8301f8c2227"
+                        method="POST"
+                    >
+
+                        <!-- FormSubmit configuration -->
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="New Portfolio Contact Message"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="_captcha"
+                            value="false"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="_template"
+                            value="table"
+                        >
+
 
                         <div class="form-row">
 
@@ -1678,11 +1702,13 @@
 
                                 <input
                                     type="text"
+                                    name="name"
                                     placeholder="Your name"
                                     required
                                 >
 
                             </div>
+
 
                             <div class="form-group">
 
@@ -1690,6 +1716,7 @@
 
                                 <input
                                     type="email"
+                                    name="email"
                                     placeholder="you@example.com"
                                     required
                                 >
@@ -1705,6 +1732,7 @@
 
                             <input
                                 type="text"
+                                name="subject"
                                 placeholder="What would you like to discuss?"
                                 required
                             >
@@ -1717,6 +1745,7 @@
                             <label>Message</label>
 
                             <textarea
+                                name="message"
                                 rows="6"
                                 placeholder="Tell me about your idea..."
                                 required

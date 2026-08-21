@@ -678,43 +678,80 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-    /* =====================================================
-       CONTACT FORM
-    ===================================================== */
+/* =====================================================
+   CONTACT FORM
+===================================================== */
 
-    const contactForm =
-        document.getElementById(
-            "contactForm"
-        );
+const contactForm =
+    document.getElementById("contactForm");
 
-    if (contactForm) {
+if (contactForm) {
 
-        contactForm.addEventListener(
-            "submit",
-            event => {
+    contactForm.addEventListener(
+        "submit",
+        async event => {
 
-                event.preventDefault();
+            event.preventDefault();
 
-                const button =
-                    contactForm.querySelector(
-                        ".form-submit"
+            const button =
+                contactForm.querySelector(".form-submit");
+
+            if (!button) {
+                return;
+            }
+
+            const original =
+                button.innerHTML;
+
+            button.innerHTML =
+                `
+                <span>Sending...</span>
+                <i class="fas fa-paper-plane"></i>
+                `;
+
+            button.disabled = true;
+
+            try {
+
+                const formData =
+                    new FormData(contactForm);
+
+                const response =
+                    await fetch(
+                        "https://formsubmit.co/ajax/93a373e2be9e5833bda9c8301f8c2227",
+                        {
+                            method: "POST",
+
+                            headers: {
+                                "Accept": "application/json"
+                            },
+
+                            body: formData
+                        }
                     );
 
-                if (!button) {
-                    return;
+                const result =
+                    await response.json();
+
+                if (!response.ok) {
+                    throw new Error(
+                        result.message ||
+                        "Failed to send message"
+                    );
                 }
 
-                const original =
-                    button.innerHTML;
+                /* SUCCESS */
 
                 button.innerHTML =
                     `
-                    <span>Message Ready ✓</span>
+                    <span>Message Sent ✓</span>
                     <i class="fas fa-check"></i>
                     `;
 
                 button.style.background =
                     "#16a34a";
+
+                contactForm.reset();
 
                 setTimeout(
                     () => {
@@ -724,15 +761,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         button.style.background =
                             "";
+
+                        button.disabled =
+                            false;
+
                     },
                     2200
                 );
 
-                contactForm.reset();
-            }
-        );
-    }
+            } catch (error) {
 
+                console.error(
+                    "Contact form error:",
+                    error
+                );
+
+                /* ERROR */
+
+                button.innerHTML =
+                    `
+                    <span>Failed to Send</span>
+                    <i class="fas fa-exclamation-triangle"></i>
+                    `;
+
+                button.style.background =
+                    "#dc2626";
+
+                setTimeout(
+                    () => {
+
+                        button.innerHTML =
+                            original;
+
+                        button.style.background =
+                            "";
+
+                        button.disabled =
+                            false;
+
+                    },
+                    2500
+                );
+
+            }
+
+        }
+    );
+
+}
 
     /* =====================================================
        COUNTER ANIMATION
