@@ -1,1 +1,7 @@
-images/
+# Never commit real API keys
+config.js
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log

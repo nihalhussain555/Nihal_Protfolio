@@ -1808,7 +1808,156 @@
     </footer>
 
 
+    <script src="config.js"></script>
     <script src="script.js"></script>
+
+    <!-- =====================================================
+     AI PORTFOLIO AGENT
+===================================================== -->
+
+<div class="ai-agent">
+
+    <!-- AI CHAT WINDOW -->
+    <div class="ai-chat" id="aiChat">
+
+        <!-- HEADER -->
+        <div class="ai-chat-header">
+
+            <div class="ai-header-info">
+
+                <div class="ai-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+
+                <div>
+                    <strong>Nihal AI Assistant</strong>
+
+                    <span>
+                        <span class="ai-online-dot"></span>
+                        
+                    </span>
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="ai-close"
+                id="aiClose"
+                aria-label="Close AI Assistant"
+            >
+                <i class="fas fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <!-- MESSAGES -->
+        <div
+            class="ai-messages"
+            id="aiMessages"
+        >
+
+            <div class="ai-message bot">
+
+                <div class="ai-message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+
+                <div class="ai-message-content">
+
+                    <p>
+                        Hi! 👋 I'm Nihal's AI portfolio assistant.
+                    </p>
+
+                    <p>
+                        Ask me about his projects, skills,
+                        experience, education or technologies.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK QUESTIONS -->
+        <div class="ai-quick-actions">
+
+            <button
+                type="button"
+                data-question="Tell me about Nihal"
+            >
+                About Nihal
+            </button>
+
+            <button
+                type="button"
+                data-question="What projects has Nihal built?"
+            >
+                Projects
+            </button>
+
+            <button
+                type="button"
+                data-question="What are Nihal's skills?"
+            >
+                Skills
+            </button>
+
+            <button
+                type="button"
+                data-question="Tell me about Nihal's experience"
+            >
+                Experience
+            </button>
+
+        </div>
+
+
+        <!-- INPUT -->
+        <form
+            class="ai-input-area"
+            id="aiForm"
+        >
+
+            <input
+                type="text"
+                id="aiInput"
+                placeholder="Ask me anything..."
+                autocomplete="off"
+            >
+
+            <button
+                type="submit"
+                id="aiSend"
+                aria-label="Send message"
+            >
+                <i class="fas fa-paper-plane"></i>
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- FLOATING BUTTON -->
+    <button
+        type="button"
+        class="ai-toggle"
+        id="aiToggle"
+        aria-label="Open AI Assistant"
+        aria-expanded="false"
+    >
+
+        <span class="ai-pulse"></span>
+
+        <i class="fas fa-robot"></i>
+
+    </button>
+
+</div>
 
 </body>
 
