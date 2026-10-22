@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T13:59:49.680721+00:00",
+  "updatedAt": "2026-10-22T18:28:28.803363+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -39,7 +39,7 @@
     }
   },
   "codolio": {
-    "totalProblems": 2286,
+    "totalProblems": 1963,
     "cScore": null,
     "globalRank": null,
     "rank": null
@@ -86,11 +86,11 @@
         "rating": 1060,
         "maxRating": 1071,
         "rank": "newbie",
-        "totalSolved": 323
+        "totalSolved": 0
       },
       "codolio": {},
       "final": {
-        "totalSolved": 323,
+        "totalSolved": 0,
         "rating": 1060,
         "maxRating": 1071,
         "rank": "newbie"
