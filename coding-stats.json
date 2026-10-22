@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T01:21:49.128906+00:00",
+  "updatedAt": "2026-10-22T13:59:49.680721+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -39,7 +39,7 @@
     }
   },
   "codolio": {
-    "totalProblems": 2243,
+    "totalProblems": 2286,
     "cScore": null,
     "globalRank": null,
     "rank": null
@@ -47,38 +47,38 @@
   "platforms": {
     "leetcode": {
       "direct": {
-        "totalSolved": 905,
-        "easySolved": 370,
-        "mediumSolved": 505,
+        "totalSolved": 925,
+        "easySolved": 377,
+        "mediumSolved": 518,
         "hardSolved": 30,
-        "rank": 47125,
-        "rating": 1849.10941796875,
-        "maxRating": 1874.253
+        "rank": 45192,
+        "rating": 1923.561267229422,
+        "maxRating": 1923.561
       },
       "codolio": {},
       "final": {
-        "totalSolved": 905,
-        "rating": 1849.10941796875,
-        "maxRating": 1874.253,
-        "rank": 47125,
-        "easySolved": 370,
-        "mediumSolved": 505,
+        "totalSolved": 925,
+        "rating": 1923.561267229422,
+        "maxRating": 1923.561,
+        "rank": 45192,
+        "easySolved": 377,
+        "mediumSolved": 518,
         "hardSolved": 30
       }
     },
     "codechef": {
       "direct": {
-        "totalSolved": 1017,
+        "totalSolved": 1038,
         "maxRating": 1610,
-        "rating": 1570,
-        "rank": 18548
+        "rating": 1555,
+        "rank": 20070
       },
       "codolio": {},
       "final": {
-        "totalSolved": 1017,
-        "rating": 1570,
+        "totalSolved": 1038,
+        "rating": 1555,
         "maxRating": 1610,
-        "rank": 18548
+        "rank": 20070
       }
     },
     "codeforces": {
@@ -86,11 +86,11 @@
         "rating": 1060,
         "maxRating": 1071,
         "rank": "newbie",
-        "totalSolved": 321
+        "totalSolved": 323
       },
       "codolio": {},
       "final": {
-        "totalSolved": 321,
+        "totalSolved": 323,
         "rating": 1060,
         "maxRating": 1071,
         "rank": "newbie"
@@ -103,7 +103,7 @@
     },
     "github": {
       "direct": {
-        "repositories": 13,
+        "repositories": 17,
         "followers": 4,
         "following": 2,
         "stars": 35,
