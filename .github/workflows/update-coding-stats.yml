@@ -1,0 +1,99 @@
+name: Update Coding Platform Stats
+
+on:
+
+  workflow_dispatch:
+
+  schedule:
+    - cron: "*/30 * * * *"
+
+
+permissions:
+  contents: write
+
+
+jobs:
+
+  update-stats:
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+
+      # -------------------------------------------------------
+      # CHECKOUT
+      # -------------------------------------------------------
+
+      - name: Checkout repository
+
+        uses: actions/checkout@v4
+
+
+      # -------------------------------------------------------
+      # PYTHON
+      # -------------------------------------------------------
+
+      - name: Setup Python
+
+        uses: actions/setup-python@v5
+
+        with:
+          python-version: "3.12"
+
+
+      # -------------------------------------------------------
+      # INSTALL
+      # -------------------------------------------------------
+
+      - name: Install dependencies
+
+        run: |
+
+          python -m pip install --upgrade pip
+
+          pip install requests beautifulsoup4
+
+
+      # -------------------------------------------------------
+      # SCRAPE DATA
+      # -------------------------------------------------------
+
+      - name: Update coding statistics
+
+        env:
+
+          CODOLIO_TOKEN: ${{ secrets.CODOLIO_TOKEN }}
+
+        run: |
+
+          python scripts/update-coding-stats.py
+
+
+      # -------------------------------------------------------
+      # COMMIT JSON
+      # -------------------------------------------------------
+
+      - name: Commit updated statistics
+
+        run: |
+
+          git config user.name "github-actions[bot]"
+
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+
+          git add coding-stats.json
+
+
+          if git diff --cached --quiet; then
+
+            echo "No statistics changes."
+
+          else
+
+            git commit -m "Update coding statistics"
+
+            git push
+
+          fi

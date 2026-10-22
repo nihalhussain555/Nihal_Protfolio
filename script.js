@@ -1920,4 +1920,787 @@ if (
     );
 
 }
+
+
+
 });
+
+// /* =========================================================
+// LIVE CODING PLATFORM STATS
+// No backend required
+// ========================================================= */
+
+// (function () {
+
+// "use strict";
+
+
+// /* =====================================================
+//    HELPER
+//    ===================================================== */
+
+// function setText(id, value) {
+
+//     const element = document.getElementById(id);
+
+//     if (element) {
+//         element.textContent = value ?? "—";
+//     }
+
+// }
+
+
+// function formatNumber(value) {
+
+//     if (
+//         value === null ||
+//         value === undefined ||
+//         value === ""
+//     ) {
+//         return "—";
+//     }
+
+//     return Number(value).toLocaleString("en-IN");
+
+// }
+
+
+// function showError(id) {
+
+//     const element = document.getElementById(id);
+
+//     if (element) {
+//         element.textContent = "—";
+//     }
+
+// }
+
+
+// /* =====================================================
+//    CODEFORCES
+//    Official Codeforces API
+//    ===================================================== */
+
+// async function loadCodeforces() {
+
+//     try {
+
+//         const username = "nihalhussain555";
+
+//         const url =
+//             `https://codeforces.com/api/user.info?handles=${encodeURIComponent(username)}`;
+
+//         const response = await fetch(url, {
+//             method: "GET",
+//             cache: "no-store"
+//         });
+
+//         if (!response.ok) {
+//             throw new Error("Codeforces request failed");
+//         }
+
+//         const data = await response.json();
+
+//         if (
+//             data.status !== "OK" ||
+//             !data.result ||
+//             !data.result.length
+//         ) {
+//             throw new Error("Codeforces user not found");
+//         }
+
+//         const user = data.result[0];
+
+
+//         /* Current Rating */
+
+//         setText(
+//             "codeforces-rating",
+//             user.rating ?? "Unrated"
+//         );
+
+
+//         /* Current Rank */
+
+//         setText(
+//             "codeforces-rank",
+//             user.rank
+//                 ? user.rank.toUpperCase()
+//                 : "Unrated"
+//         );
+
+
+//         /* Maximum Rating */
+
+//         setText(
+//             "codeforces-max-rating",
+//             user.maxRating ?? "—"
+//         );
+
+
+//         console.log(
+//             "Codeforces live data loaded:",
+//             user
+//         );
+
+//     }
+
+//     catch (error) {
+
+//         console.error(
+//             "Codeforces error:",
+//             error
+//         );
+
+//         showError("codeforces-rating");
+//         showError("codeforces-rank");
+//         showError("codeforces-max-rating");
+
+//     }
+
+// }
+
+
+// /* =====================================================
+//    LEETCODE
+//    Public community API
+//    ===================================================== */
+
+// async function loadLeetCode() {
+
+//     try {
+
+//         const username = "Nihal_555";
+
+//         const url =
+//             `https://alfa-leetcode-api.onrender.com/${encodeURIComponent(username)}/profile`;
+
+//         const response = await fetch(url, {
+//             method: "GET",
+//             cache: "no-store"
+//         });
+
+//         if (!response.ok) {
+//             throw new Error("LeetCode API request failed");
+//         }
+
+//         const data = await response.json();
+
+
+//         /* Total solved */
+
+//         let totalSolved = null;
+
+
+//         if (
+//             data.totalSolved !== undefined &&
+//             data.totalSolved !== null
+//         ) {
+
+//             totalSolved = data.totalSolved;
+
+//         }
+
+//         else if (
+//             data.totalQuestionsSolved !== undefined
+//         ) {
+
+//             totalSolved =
+//                 data.totalQuestionsSolved;
+
+//         }
+
+
+//         if (totalSolved !== null) {
+
+//             setText(
+//                 "leetcode-problems",
+//                 formatNumber(totalSolved)
+//             );
+
+//         }
+
+//         else {
+
+//             setText(
+//                 "leetcode-problems",
+//                 "—"
+//             );
+
+//         }
+
+
+//         /* LeetCode global rank */
+
+//         const rank =
+//             data.ranking ??
+//             data.rank ??
+//             data.globalRanking;
+
+
+//         if (rank !== undefined && rank !== null) {
+
+//             setText(
+//                 "leetcode-rank",
+//                 formatNumber(rank)
+//             );
+
+//         }
+
+//         else {
+
+//             setText(
+//                 "leetcode-rank",
+//                 "—"
+//             );
+
+//         }
+
+
+//         /* Rating */
+
+//         const rating =
+//             data.contestRating ??
+//             data.rating ??
+//             data.contest?.rating;
+
+
+//         if (rating !== undefined && rating !== null) {
+
+//             setText(
+//                 "leetcode-rating",
+//                 Math.round(Number(rating))
+//             );
+
+//         }
+
+//         else {
+
+//             setText(
+//                 "leetcode-rating",
+//                 "—"
+//             );
+
+//         }
+
+
+//         console.log(
+//             "LeetCode live data loaded:",
+//             data
+//         );
+
+//     }
+
+//     catch (error) {
+
+//         console.error(
+//             "LeetCode error:",
+//             error
+//         );
+
+//         showError("leetcode-problems");
+//         showError("leetcode-rank");
+//         showError("leetcode-rating");
+
+//     }
+
+// }
+
+
+// /* =====================================================
+//    CODECHEF
+//    Public community API
+//    ===================================================== */
+
+// async function loadCodeChef() {
+
+//     try {
+
+//         const username = "kit28csb106";
+
+//         /*
+//          * Public community endpoint.
+//          * This is NOT an official CodeChef API.
+//          */
+
+//         const url =
+//             `https://api-base-sahil.herokuapp.com/codechef?username=${encodeURIComponent(username)}`;
+
+//         const response = await fetch(url, {
+//             method: "GET",
+//             cache: "no-store"
+//         });
+
+//         if (!response.ok) {
+//             throw new Error("CodeChef request failed");
+//         }
+
+//         const data = await response.json();
+
+
+//         const rating =
+//             data.rating ??
+//             data.currentRating ??
+//             data.current_rating;
+
+
+//         const globalRank =
+//             data.global_rank ??
+//             data.globalRank ??
+//             data.rank;
+
+
+//         const stars =
+//             data.stars ??
+//             data.star;
+
+
+//         setText(
+//             "codechef-rating",
+//             rating ?? "—"
+//         );
+
+
+//         setText(
+//             "codechef-rank",
+//             globalRank
+//                 ? formatNumber(globalRank)
+//                 : "—"
+//         );
+
+
+//         setText(
+//             "codechef-stars",
+//             stars
+//                 ? `${stars}★`
+//                 : "—"
+//         );
+
+
+//         console.log(
+//             "CodeChef live data loaded:",
+//             data
+//         );
+
+//     }
+
+//     catch (error) {
+
+//         console.error(
+//             "CodeChef error:",
+//             error
+//         );
+
+//         showError("codechef-rating");
+//         showError("codechef-rank");
+//         showError("codechef-stars");
+
+//     }
+
+// }
+
+
+// /* =====================================================
+//    HACKERRANK
+//    Public profile check
+//    ===================================================== */
+
+// function loadHackerRank() {
+
+//     /*
+//      * HackerRank does not provide a suitable anonymous
+//      * public profile statistics API for this use case.
+//      *
+//      * Therefore we do not invent rating/statistics.
+//      * We simply indicate that the public profile exists.
+//      */
+
+//     setText(
+//         "hackerrank-status",
+//         "PUBLIC"
+//     );
+
+//     setText(
+//         "hackerrank-profile",
+//         "ACTIVE"
+//     );
+
+//     setText(
+//         "hackerrank-data",
+//         "LIVE"
+//     );
+
+// }
+
+
+// /* =====================================================
+//    CODOLIO
+//    ===================================================== */
+
+// function loadCodolio() {
+
+//     /*
+//      * Codolio does not expose a documented public
+//      * browser API for portfolio integrations.
+//      *
+//      * Therefore we keep its stats dynamic-safe rather
+//      * than displaying invented values.
+//      */
+
+//     setText(
+//         "codolio-rank",
+//         "VIEW PROFILE"
+//     );
+
+//     setText(
+//         "codolio-score",
+//         "LIVE"
+//     );
+
+//     setText(
+//         "codolio-problems",
+//         "LIVE"
+//     );
+
+// }
+
+
+// /* =====================================================
+//    LAST UPDATED
+//    ===================================================== */
+
+// function updateTimestamp() {
+
+//     const element =
+//         document.getElementById(
+//             "platform-last-updated"
+//         );
+
+//     if (!element) return;
+
+
+//     const now = new Date();
+
+//     element.textContent =
+//         "Updated " +
+//         now.toLocaleTimeString(
+//             "en-IN",
+//             {
+//                 hour: "2-digit",
+//                 minute: "2-digit",
+//                 second: "2-digit"
+//             }
+//         );
+
+// }
+
+
+// /* =====================================================
+//    LOAD EVERYTHING
+//    ===================================================== */
+
+// async function loadAllPlatformStats() {
+
+//     updateTimestamp();
+
+
+//     /*
+//      * Codeforces + LeetCode + CodeChef
+//      * are requested independently so one
+//      * failure does not break the others.
+//      */
+
+//     await Promise.allSettled([
+
+//         loadCodeforces(),
+
+//         loadLeetCode(),
+
+//         loadCodeChef()
+
+//     ]);
+
+
+//     loadCodolio();
+
+//     loadHackerRank();
+
+//     updateTimestamp();
+
+// }
+
+
+// /* =====================================================
+//    INITIAL LOAD
+//    ===================================================== */
+
+// if (document.readyState === "loading") {
+
+//     document.addEventListener(
+//         "DOMContentLoaded",
+//         loadAllPlatformStats
+//     );
+
+// }
+
+// else {
+
+//     loadAllPlatformStats();
+
+// }
+
+
+// /* =====================================================
+//    AUTO REFRESH
+//    Every 5 minutes
+//    ===================================================== */
+
+// setInterval(
+//     loadAllPlatformStats,
+//     5 * 60 * 1000
+// );
+
+// /* =========================================================
+// GITHUB LIVE DATA
+// ========================================================= */
+
+// async function loadGitHub() {
+
+
+// const username = "nihalhussain555";
+
+// const reposElement =
+//     document.getElementById("github-repos");
+
+// const followersElement =
+//     document.getElementById("github-followers");
+
+// const starsElement =
+//     document.getElementById("github-stars");
+
+
+// try {
+
+//     /*
+//      * -------------------------------------------------
+//      * 1. FETCH GITHUB PROFILE
+//      * -------------------------------------------------
+//      */
+
+//     const profileResponse = await fetch(
+//         `https://api.github.com/users/${username}`,
+//         {
+//             method: "GET",
+//             headers: {
+//                 "Accept": "application/vnd.github+json"
+//             },
+//             cache: "no-store"
+//         }
+//     );
+
+
+//     if (!profileResponse.ok) {
+
+//         throw new Error(
+//             `GitHub profile API returned ${profileResponse.status}`
+//         );
+
+//     }
+
+
+//     const profile =
+//         await profileResponse.json();
+
+
+//     console.log(
+//         "GitHub profile:",
+//         profile
+//     );
+
+
+//     /*
+//      * -------------------------------------------------
+//      * 2. REAL PUBLIC REPOSITORY COUNT
+//      * -------------------------------------------------
+//      */
+
+//     if (reposElement) {
+
+//         reposElement.textContent =
+//             Number(profile.public_repos)
+//                 .toLocaleString("en-IN");
+
+//     }
+
+
+//     /*
+//      * -------------------------------------------------
+//      * 3. REAL FOLLOWER COUNT
+//      * -------------------------------------------------
+//      */
+
+//     if (followersElement) {
+
+//         followersElement.textContent =
+//             Number(profile.followers)
+//                 .toLocaleString("en-IN");
+
+//     }
+
+
+//     /*
+//      * -------------------------------------------------
+//      * 4. FETCH ALL PUBLIC REPOSITORIES
+//      * -------------------------------------------------
+//      */
+
+//     let allRepositories = [];
+
+//     let page = 1;
+
+//     while (true) {
+
+//         const reposResponse = await fetch(
+//             `https://api.github.com/users/${username}/repos?per_page=100&page=${page}&type=owner`,
+//             {
+//                 method: "GET",
+//                 headers: {
+//                     "Accept":
+//                         "application/vnd.github+json"
+//                 },
+//                 cache: "no-store"
+//             }
+//         );
+
+
+//         if (!reposResponse.ok) {
+
+//             throw new Error(
+//                 `GitHub repositories API returned ${reposResponse.status}`
+//             );
+
+//         }
+
+
+//         const repositories =
+//             await reposResponse.json();
+
+
+//         if (!Array.isArray(repositories)) {
+
+//             break;
+
+//         }
+
+
+//         allRepositories =
+//             allRepositories.concat(
+//                 repositories
+//             );
+
+
+//         /*
+//          * GitHub returns an empty array when
+//          * there are no more repositories.
+//          */
+
+//         if (repositories.length < 100) {
+
+//             break;
+
+//         }
+
+
+//         page++;
+
+//     }
+
+
+//     /*
+//      * -------------------------------------------------
+//      * 5. CALCULATE TOTAL STARS
+//      * -------------------------------------------------
+//      */
+
+//     let totalStars = 0;
+
+
+//     allRepositories.forEach(
+//         repository => {
+
+//             totalStars +=
+//                 Number(
+//                     repository.stargazers_count || 0
+//                 );
+
+//         }
+//     );
+
+
+//     if (starsElement) {
+
+//         starsElement.textContent =
+//             totalStars.toLocaleString("en-IN");
+
+//     }
+
+
+//     /*
+//      * -------------------------------------------------
+//      * 6. SUCCESS
+//      * -------------------------------------------------
+//      */
+
+//     console.log(
+//         "GitHub LIVE DATA",
+//         {
+//             username: username,
+//             repositories:
+//                 profile.public_repos,
+//             followers:
+//                 profile.followers,
+//             stars:
+//                 totalStars
+//         }
+//     );
+
+
+// } catch (error) {
+
+
+//     console.error(
+//         "Unable to fetch GitHub data:",
+//         error
+//     );
+
+
+//     /*
+//      * Don't leave "Loading..." forever
+//      */
+
+//     if (reposElement) {
+
+//         reposElement.textContent = "—";
+
+//     }
+
+
+//     if (followersElement) {
+
+//         followersElement.textContent = "—";
+
+//     }
+
+
+//     if (starsElement) {
+
+//         starsElement.textContent = "—";
+
+//     }
+
+// }
+
+// }
+
+
+// })();
