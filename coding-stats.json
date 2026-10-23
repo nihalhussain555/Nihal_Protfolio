@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T10:23:25.442059+00:00",
+  "updatedAt": "2026-10-23T15:21:35.081426+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -39,7 +39,7 @@
     }
   },
   "codolio": {
-    "totalProblems": 2286,
+    "totalProblems": 2287,
     "cScore": null,
     "globalRank": null,
     "rank": null
@@ -47,22 +47,22 @@
   "platforms": {
     "leetcode": {
       "direct": {
-        "totalSolved": 925,
+        "totalSolved": 926,
         "easySolved": 377,
-        "mediumSolved": 518,
+        "mediumSolved": 519,
         "hardSolved": 30,
-        "rank": 45192,
+        "rank": 45220,
         "rating": 1923.561267229422,
         "maxRating": 1923.561
       },
       "codolio": {},
       "final": {
-        "totalSolved": 925,
+        "totalSolved": 926,
         "rating": 1923.561267229422,
         "maxRating": 1923.561,
-        "rank": 45192,
+        "rank": 45220,
         "easySolved": 377,
-        "mediumSolved": 518,
+        "mediumSolved": 519,
         "hardSolved": 30
       }
     },
