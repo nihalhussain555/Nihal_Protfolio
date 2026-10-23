@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T21:52:59.427947+00:00",
+  "updatedAt": "2026-10-23T00:24:22.277249+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -39,7 +39,7 @@
     }
   },
   "codolio": {
-    "totalProblems": 1963,
+    "totalProblems": 2286,
     "cScore": null,
     "globalRank": null,
     "rank": null
@@ -83,15 +83,15 @@
     },
     "codeforces": {
       "direct": {
-        "rating": 1060,
+        "rating": 993,
         "maxRating": 1071,
         "rank": "newbie",
-        "totalSolved": 0
+        "totalSolved": 323
       },
       "codolio": {},
       "final": {
-        "totalSolved": 0,
-        "rating": 1060,
+        "totalSolved": 323,
+        "rating": 993,
         "maxRating": 1071,
         "rank": "newbie"
       }
