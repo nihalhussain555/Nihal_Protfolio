@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T07:26:51.447594+00:00",
+  "updatedAt": "2026-10-26T14:29:32.967008+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -51,7 +51,7 @@
         "easySolved": 379,
         "mediumSolved": 521,
         "hardSolved": 30,
-        "rank": 44741,
+        "rank": 44623,
         "rating": 1923.561267229422,
         "maxRating": 1923.561
       },
@@ -60,7 +60,7 @@
         "totalSolved": 930,
         "rating": 1923.561267229422,
         "maxRating": 1923.561,
-        "rank": 44741,
+        "rank": 44623,
         "easySolved": 379,
         "mediumSolved": 521,
         "hardSolved": 30
