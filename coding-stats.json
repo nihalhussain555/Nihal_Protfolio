@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T06:02:04.842142+00:00",
+  "updatedAt": "2026-10-28T13:21:48.336596+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -51,7 +51,7 @@
         "easySolved": 379,
         "mediumSolved": 521,
         "hardSolved": 30,
-        "rank": 44664,
+        "rank": 44690,
         "rating": 1923.561267229422,
         "maxRating": 1923.561
       },
@@ -60,7 +60,7 @@
         "totalSolved": 930,
         "rating": 1923.561267229422,
         "maxRating": 1923.561,
-        "rank": 44664,
+        "rank": 44690,
         "easySolved": 379,
         "mediumSolved": 521,
         "hardSolved": 30
@@ -70,15 +70,15 @@
       "direct": {
         "totalSolved": 1038,
         "maxRating": 1610,
-        "rating": 1556,
-        "rank": 19443
+        "rating": 1555,
+        "rank": 20070
       },
       "codolio": {},
       "final": {
         "totalSolved": 1038,
-        "rating": 1556,
+        "rating": 1555,
         "maxRating": 1610,
-        "rank": 19443
+        "rank": 20070
       }
     },
     "codeforces": {
