@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T13:21:48.336596+00:00",
+  "updatedAt": "2026-10-28T18:58:55.663561+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -39,7 +39,7 @@
     }
   },
   "codolio": {
-    "totalProblems": 2291,
+    "totalProblems": 2295,
     "cScore": null,
     "globalRank": null,
     "rank": null
@@ -68,17 +68,17 @@
     },
     "codechef": {
       "direct": {
-        "totalSolved": 1038,
+        "totalSolved": 1042,
         "maxRating": 1610,
-        "rating": 1555,
-        "rank": 20070
+        "rating": 1578,
+        "rank": 17926
       },
       "codolio": {},
       "final": {
-        "totalSolved": 1038,
-        "rating": 1555,
+        "totalSolved": 1042,
+        "rating": 1578,
         "maxRating": 1610,
-        "rank": 20070
+        "rank": 17926
       }
     },
     "codeforces": {
@@ -103,7 +103,7 @@
     },
     "github": {
       "direct": {
-        "repositories": 17,
+        "repositories": 18,
         "followers": 4,
         "following": 2,
         "stars": 35,
