@@ -24,7 +24,18 @@
      * =========================================================
      */
 
-    const STATS_FILE = "./coding-stats.json";
+    /*
+     * The committed file is tried first so a normally hosted site
+     * keeps working offline. The raw GitHub copy is the fallback
+     * for previews opened straight from disk (file://), where the
+     * browser refuses to fetch a sibling file.
+     */
+    const STATS_FILES = [
+        "./coding-stats.json",
+        "https://raw.githubusercontent.com/" +
+            "nihalhussain555/Nihal_Protfolio/main/" +
+            "coding-stats.json",
+    ];
 
     const REFRESH_TIME = 5 * 60 * 1000;
 
@@ -178,7 +189,7 @@
     function renderPlatform(
         data,
         platformName,
-        ids
+        fieldIds
     ) {
 
         const platform =
@@ -187,55 +198,23 @@
             ] || {};
 
 
-        if (ids.solved) {
+        Object.entries(
+            fieldIds
+        ).forEach(
+            ([
+                field,
+                id,
+            ]) => {
 
-            setValue(
-                ids.solved,
-                getPlatformValue(
-                    platform,
-                    "totalSolved"
-                )
-            );
-        }
-
-
-        if (ids.rating) {
-
-            setValue(
-                ids.rating,
-                getPlatformValue(
-                    platform,
-                    "rating"
-                )
-            );
-        }
-
-
-        if (ids.maxRating) {
-
-            setValue(
-                ids.maxRating,
-                getPlatformValue(
-                    platform,
-                    "maxRating"
-                )
-            );
-        }
-
-
-        if (ids.rank) {
-
-            const rank =
-                getPlatformValue(
-                    platform,
-                    "rank"
+                setValue(
+                    id,
+                    getPlatformValue(
+                        platform,
+                        field
+                    )
                 );
-
-            setValue(
-                ids.rank,
-                rank
-            );
-        }
+            }
+        );
     }
 
 
@@ -266,7 +245,7 @@
             data,
             "leetcode",
             {
-                solved:
+                totalSolved:
                     "leetcode-solved",
 
                 rating:
@@ -289,7 +268,7 @@
             data,
             "codechef",
             {
-                solved:
+                totalSolved:
                     "codechef-solved",
 
                 rating:
@@ -312,7 +291,7 @@
             data,
             "codeforces",
             {
-                solved:
+                totalSolved:
                     "codeforces-solved",
 
                 rating:
@@ -330,22 +309,25 @@
         // -----------------------------------------------------
         // HACKERRANK
         // -----------------------------------------------------
+        //
+        // HackerRank publishes no contest rating, so the card
+        // shows badges and certificates instead.
 
         renderPlatform(
             data,
             "hackerrank",
             {
-                solved:
+                totalSolved:
                     "hackerrank-solved",
 
-                rating:
-                    "hackerrank-rating",
+                badgesEarned:
+                    "hackerrank-badges",
 
-                maxRating:
-                    "hackerrank-max-rating",
+                certifications:
+                    "hackerrank-certifications",
 
                 rank:
-                    "hackerrank-status",
+                    "hackerrank-rank",
             }
         );
 
@@ -404,24 +386,19 @@
 
         setValue(
             "codolio-score",
-            codolio.cScore ??
-            codolio.score ??
-            codolio.c_score
+            codolio.cScore
         );
 
 
         setValue(
             "codolio-rank",
-            codolio.globalRank ??
-            codolio.rank
+            codolio.globalRank
         );
 
 
         setValue(
             "codolio-solved",
-            codolio.totalProblems ??
-            codolio.totalSolved ??
-            codolio.total
+            codolio.totalProblems
         );
 
 
@@ -538,7 +515,7 @@
         "leetcode-solved", "leetcode-rating", "leetcode-max-rating", "leetcode-rank",
         "codechef-solved", "codechef-rating", "codechef-max-rating", "codechef-rank",
         "codeforces-solved", "codeforces-rating", "codeforces-max-rating", "codeforces-rank",
-        "hackerrank-solved", "hackerrank-rating", "hackerrank-max-rating", "hackerrank-status",
+        "hackerrank-solved", "hackerrank-badges", "hackerrank-certifications", "hackerrank-rank",
         "github-repos", "github-followers", "github-stars", "github-forks",
         "codolio-score", "codolio-rank", "codolio-solved",
     ];
@@ -580,6 +557,35 @@
     // LOAD JSON
     // =========================================================
 
+    async function fetchStatsFile(
+        url,
+        signal
+    ) {
+
+        const response =
+            await fetch(
+                url +
+                "?v=" +
+                Date.now(),
+                {
+                    method: "GET",
+                    cache: "no-store",
+                    signal,
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                `HTTP ${response.status}`
+            );
+        }
+
+        return response.json();
+    }
+
+
     async function loadStats() {
 
         const controller = new AbortController();
@@ -593,29 +599,34 @@
 
         try {
 
-            const response =
-                await fetch(
-                    STATS_FILE +
-                    "?v=" +
-                    Date.now(),
-                    {
-                        method: "GET",
-                        cache: "no-store",
-                        signal: controller.signal,
-                    }
-                );
+            let data = null;
 
+            let lastError = null;
 
-            if (!response.ok) {
+            for (const url of STATS_FILES) {
 
-                throw new Error(
-                    `HTTP ${response.status}`
-                );
+                try {
+
+                    data =
+                        await fetchStatsFile(
+                            url,
+                            controller.signal
+                        );
+
+                    break;
+
+                } catch (error) {
+
+                    lastError = error;
+                }
             }
 
 
-            const data =
-                await response.json();
+            if (!data) {
+
+                throw lastError ||
+                    new Error("No stats source reachable");
+            }
 
 
             renderStats(data);

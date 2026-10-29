@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-29T09:24:24.099759+00:00",
+  "updatedAt": "2026-10-29T15:40:39.852782+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
         "ok": true,
-        "message": "Loaded 0 platform records."
+        "message": "Loaded 7 platform records."
       }
     },
     "leetcode": {
@@ -27,8 +27,8 @@
     },
     "hackerrank": {
       "direct": {
-        "ok": false,
-        "message": "HackerRank public profile scraper. Codolio fills fields that are not publicly available."
+        "ok": true,
+        "message": "HackerRank public badges and certificate APIs. HackerRank exposes no contest rating, so stars and badges are reported instead."
       }
     },
     "github": {
@@ -39,10 +39,9 @@
     }
   },
   "codolio": {
-    "totalProblems": 2295,
-    "cScore": null,
-    "globalRank": null,
-    "rank": null
+    "totalProblems": 2424,
+    "cScore": 792,
+    "globalRank": 1308
   },
   "platforms": {
     "leetcode": {
@@ -51,16 +50,21 @@
         "easySolved": 379,
         "mediumSolved": 521,
         "hardSolved": 30,
-        "rank": 44690,
-        "rating": 1923.561267229422,
-        "maxRating": 1923.561
+        "rank": 44715,
+        "rating": 1923,
+        "maxRating": 1923
       },
-      "codolio": {},
+      "codolio": {
+        "totalSolved": 930,
+        "rating": 1923,
+        "maxRating": 1923,
+        "rank": 34995
+      },
       "final": {
         "totalSolved": 930,
-        "rating": 1923.561267229422,
-        "maxRating": 1923.561,
-        "rank": 44690,
+        "rating": 1923,
+        "maxRating": 1923,
+        "rank": 44715,
         "easySolved": 379,
         "mediumSolved": 521,
         "hardSolved": 30
@@ -71,14 +75,18 @@
         "totalSolved": 1042,
         "maxRating": 1610,
         "rating": 1578,
-        "rank": 17967
+        "rank": 17968
       },
-      "codolio": {},
+      "codolio": {
+        "totalSolved": 1038,
+        "rating": 1555,
+        "maxRating": 1610
+      },
       "final": {
         "totalSolved": 1042,
         "rating": 1578,
         "maxRating": 1610,
-        "rank": 17967
+        "rank": 17968
       }
     },
     "codeforces": {
@@ -88,7 +96,12 @@
         "rank": "newbie",
         "totalSolved": 323
       },
-      "codolio": {},
+      "codolio": {
+        "totalSolved": 323,
+        "rating": 993,
+        "maxRating": 1071,
+        "rank": "newbie"
+      },
       "final": {
         "totalSolved": 323,
         "rating": 993,
@@ -97,9 +110,21 @@
       }
     },
     "hackerrank": {
-      "direct": {},
-      "codolio": {},
-      "final": {}
+      "direct": {
+        "rank": 236286,
+        "totalSolved": 129,
+        "badgesEarned": 5,
+        "certifications": 3
+      },
+      "codolio": {
+        "totalSolved": 128
+      },
+      "final": {
+        "totalSolved": 129,
+        "rank": 236286,
+        "badgesEarned": 5,
+        "certifications": 3
+      }
     },
     "github": {
       "direct": {
@@ -110,7 +135,13 @@
         "forks": 0
       },
       "codolio": {},
-      "final": {}
+      "final": {
+        "repositories": 18,
+        "followers": 4,
+        "following": 2,
+        "stars": 35,
+        "forks": 0
+      }
     }
   }
 }

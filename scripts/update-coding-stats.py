@@ -148,6 +148,17 @@ def first_number(*values):
     return None
 
 
+def rounded(value):
+    """Platform ratings are only ever shown as whole numbers."""
+
+    result = number(value)
+
+    if result is None:
+        return None
+
+    return int(result)
+
+
 def put(data, key, value):
     if value is not None and value != "":
         data[key] = value
@@ -189,7 +200,6 @@ output = {
         "totalProblems": None,
         "cScore": None,
         "globalRank": None,
-        "rank": None,
     },
 
     "platforms": {
@@ -236,139 +246,28 @@ def set_status(platform, source, success, message=""):
 
 
 # ============================================================
-# GENERIC JSON SEARCH
-# ============================================================
-
-def walk(value):
-    if isinstance(value, dict):
-
-        yield value
-
-        for child in value.values():
-            yield from walk(child)
-
-    elif isinstance(value, list):
-
-        for child in value:
-            yield from walk(child)
-
-
-def find_value(root, keys):
-
-    wanted = {
-        str(key).lower()
-        for key in keys
-    }
-
-    for obj in walk(root):
-
-        for key, value in obj.items():
-
-            if str(key).lower() in wanted:
-
-                if value not in (None, ""):
-                    return value
-
-    return None
-
-
-# ============================================================
 # CODOLIO
 # ============================================================
 
-def extract_script_json(html):
+CODOLIO_API = "https://api.codolio.com/profile"
 
-    results = []
+CODOLIO_LEADERBOARD = (
+    "https://node.codolio.com/api/leaderboard/v1/"
+    "get-user-leaderboard"
+)
 
-    soup = BeautifulSoup(
-        html,
-        "html.parser",
-    )
+CODOLIO_HEADERS = {
+    "Accept": "application/json",
+    "Origin": "https://codolio.com",
+    "Referer": (
+        "https://codolio.com/profile/"
+        f"{CODOLIO_PROFILE}"
+    ),
+}
 
-    for script in soup.find_all("script"):
-
-        raw = script.string or script.get_text()
-
-        if not raw:
-            continue
-
-        raw = raw.strip()
-
-        if not raw:
-            continue
-
-        script_id = script.get("id", "")
-
-        if (
-            script_id == "__NEXT_DATA__"
-            or "platformProfiles" in raw
-            or "totalQuestionStats" in raw
-            or "cScore" in raw
-        ):
-
-            try:
-                results.append(
-                    json.loads(raw)
-                )
-
-            except Exception:
-                pass
-
-    return results
-
-
-def codolio_profile_stats(root):
-
-    result = {}
-
-    total = find_value(
-        root,
-        [
-            "totalProblems",
-            "totalSolved",
-            "totalQuestionCounts",
-            "totalQuestionCount",
-        ],
-    )
-
-    score = find_value(
-        root,
-        [
-            "cScore",
-            "c_score",
-            "score",
-        ],
-    )
-
-    rank = find_value(
-        root,
-        [
-            "globalRank",
-            "global_rank",
-            "rank",
-            "ranking",
-        ],
-    )
-
-    put(
-        result,
-        "totalProblems",
-        number(total),
-    )
-
-    put(
-        result,
-        "cScore",
-        number(score),
-    )
-
-    put(
-        result,
-        "globalRank",
-        number(rank),
-    )
-
-    return result
+# The leaderboard ranks each score type separately; this category
+# is the C-Score ranking the profile page shows as "Global Rank".
+CODOLIO_CSCORE_CATEGORY = "1"
 
 
 def codolio_platform_stats(profile):
@@ -401,96 +300,35 @@ def codolio_platform_stats(profile):
             ),
         )
 
-        put(
-            result,
-            "easySolved",
-            first_number(
-                question_stats.get(
-                    "easyQuestionCounts"
-                ),
-                question_stats.get(
-                    "easySolved"
-                ),
-                question_stats.get(
-                    "easy"
-                ),
-            ),
-        )
-
-        put(
-            result,
-            "mediumSolved",
-            first_number(
-                question_stats.get(
-                    "mediumQuestionCounts"
-                ),
-                question_stats.get(
-                    "mediumSolved"
-                ),
-                question_stats.get(
-                    "medium"
-                ),
-            ),
-        )
-
-        put(
-            result,
-            "hardSolved",
-            first_number(
-                question_stats.get(
-                    "hardQuestionCounts"
-                ),
-                question_stats.get(
-                    "hardSolved"
-                ),
-                question_stats.get(
-                    "hard"
-                ),
-            ),
-        )
-
-    put(
-        result,
-        "totalSolved",
-        first_number(
-            profile.get("totalSolved"),
-            profile.get("totalProblems"),
-        ),
+    user_stats = (
+        profile.get("userStats")
+        or {}
     )
 
     put(
         result,
         "rating",
         first_number(
-            profile.get("rating"),
-            profile.get("currentRating"),
-            profile.get("current_rating"),
-            profile.get("contestRating"),
+            user_stats.get("currentRating"),
+            user_stats.get("rating"),
         ),
     )
 
     put(
         result,
         "maxRating",
-        first_number(
-            profile.get("maxRating"),
-            profile.get("highestRating"),
-            profile.get("highest_rating"),
-            profile.get("maximumRating"),
+        number(
+            user_stats.get("maxRating")
         ),
-    )
-
-    rank = (
-        profile.get("globalRank")
-        or profile.get("global_rank")
-        or profile.get("rank")
-        or profile.get("ranking")
     )
 
     put(
         result,
         "rank",
-        clean_rank(rank),
+        clean_rank(
+            user_stats.get("rank")
+            or user_stats.get("maxRank")
+        ),
     )
 
     return result
@@ -500,92 +338,69 @@ def load_codolio():
 
     profiles = []
 
-    html = get_text(
-        f"https://codolio.com/profile/{CODOLIO_PROFILE}"
+    payload = get_json(
+        f"{CODOLIO_API}?userKey={CODOLIO_PROFILE}",
+        CODOLIO_HEADERS,
     )
 
-    if not html:
+    data = (
+        payload.get("data")
+        if isinstance(payload, dict)
+        else None
+    )
+
+    if not isinstance(data, dict):
 
         set_status(
             "codolio",
             "public",
             False,
-            "Codolio profile could not be loaded.",
+            "Codolio profile API could not be loaded.",
         )
 
         return profiles
 
-    roots = extract_script_json(html)
+    nested = data.get("platformProfiles")
 
-    # Extract profile-level information.
-    for root in roots:
+    if isinstance(nested, dict):
+        nested = nested.get("platformProfiles")
 
-        stats = codolio_profile_stats(root)
+    if isinstance(nested, list):
+        profiles = nested
 
-        for key, value in stats.items():
+    user_id = data.get("id")
 
-            if output["codolio"].get(key) is None:
-                output["codolio"][key] = value
+    if user_id:
 
-    # Extract platform profiles.
-    for root in roots:
-
-        for obj in walk(root):
-
-            platform_data = obj.get(
-                "platformProfiles"
-            )
-
-            if isinstance(
-                platform_data,
-                list,
-            ):
-
-                profiles.extend(
-                    platform_data
-                )
-
-    # Visible text fallback.
-    soup = BeautifulSoup(
-        html,
-        "html.parser",
-    )
-
-    text = soup.get_text(
-        " ",
-        strip=True,
-    )
-
-    if output["codolio"]["cScore"] is None:
-
-        match = re.search(
-            r"C-Score[^0-9]{0,50}([\d,]+)",
-            text,
-            re.I,
+        leaderboard = get_json(
+            f"{CODOLIO_LEADERBOARD}?userId={user_id}",
+            CODOLIO_HEADERS,
         )
 
-        if match:
-            output["codolio"]["cScore"] = number(
-                match.group(1)
+        entry = (
+            (
+                (leaderboard or {}).get("data") or {}
+            ).get("global") or {}
+        ).get(CODOLIO_CSCORE_CATEGORY)
+
+        if isinstance(entry, dict):
+
+            put(
+                output["codolio"],
+                "cScore",
+                rounded(entry.get("score")),
             )
 
-    if output["codolio"]["totalProblems"] is None:
-
-        match = re.search(
-            r"Total Problems[^0-9]{0,50}([\d,]+)",
-            text,
-            re.I,
-        )
-
-        if match:
-            output["codolio"]["totalProblems"] = number(
-                match.group(1)
+            put(
+                output["codolio"],
+                "globalRank",
+                number(entry.get("rank")),
             )
 
     set_status(
         "codolio",
         "public",
-        True,
+        bool(profiles),
         f"Loaded {len(profiles)} platform records.",
     )
 
@@ -793,7 +608,7 @@ def load_leetcode():
         put(
             result,
             "rating",
-            number(
+            rounded(
                 ranking.get("rating")
             ),
         )
@@ -864,8 +679,10 @@ def load_leetcode():
 
     if ratings:
 
-        result["maxRating"] = max(
-            ratings
+        result["maxRating"] = int(
+            max(
+                ratings
+            )
         )
 
     # HTML fallback.
@@ -1290,97 +1107,108 @@ output["platforms"]["codeforces"]["direct"] = (
 # HACKERRANK
 # ============================================================
 
+# HackerRank's profile page is a client-rendered app and no longer
+# prints any statistics into the HTML, so these are the JSON
+# endpoints that page itself calls. They are public and need no
+# authentication.
+HACKERRANK_BADGES_API = (
+    "https://www.hackerrank.com/rest/hackers/"
+    f"{HACKERRANK_USERNAME}/badges"
+)
+
+HACKERRANK_CERTIFICATES_API = (
+    "https://www.hackerrank.com/community/v1/"
+    "test_results/hacker_certificate"
+    f"?username={HACKERRANK_USERNAME}"
+)
+
+HACKERRANK_HEADERS = {
+    "Accept": "application/json",
+    "Referer": (
+        "https://www.hackerrank.com/profile/"
+        f"{HACKERRANK_USERNAME}"
+    ),
+}
+
+
 def load_hackerrank():
 
     result = {}
 
-    urls = [
-        (
-            "https://www.hackerrank.com/profile/"
-            f"{HACKERRANK_USERNAME}"
-        ),
+    badges = get_json(
+        HACKERRANK_BADGES_API,
+        HACKERRANK_HEADERS,
+    )
 
-        (
-            "https://www.hackerrank.com/"
-            f"{HACKERRANK_USERNAME}"
-        ),
-    ]
+    models = (
+        badges.get("models")
+        if isinstance(badges, dict)
+        else None
+    )
 
-    for url in urls:
+    if isinstance(models, list) and models:
 
-        html = get_text(url)
+        solved = 0
+        earned = 0
 
-        if not html:
-            continue
+        for badge in models:
 
-        soup = BeautifulSoup(
-            html,
-            "html.parser",
-        )
+            if not isinstance(badge, dict):
+                continue
 
-        text = soup.get_text(
-            " ",
-            strip=True,
-        )
+            solved += int(badge.get("solved") or 0)
 
-        patterns = [
-            r"([\d,]+)\s+problems solved",
-            r"([\d,]+)\s+Problems Solved",
-            r"([\d,]+)\s+challenges solved",
-            r"([\d,]+)\s+Challenges Solved",
-        ]
+            if int(badge.get("stars") or 0) > 0:
+                earned += 1
 
-        for pattern in patterns:
+            if badge.get("badge_type") == "problem-solving":
 
-            match = re.search(
-                pattern,
-                text,
-                re.I,
-            )
-
-            if match:
-
-                result["totalSolved"] = number(
-                    match.group(1)
+                put(
+                    result,
+                    "rank",
+                    number(badge.get("hacker_rank")),
                 )
 
-                break
+        put(result, "totalSolved", solved or None)
+        put(result, "badgesEarned", earned or None)
 
-        rating_match = re.search(
-            r"(?:Rating|Score)\s*:?\s*([\d,]+)",
-            text,
-            re.I,
-        )
+    certificates = get_json(
+        HACKERRANK_CERTIFICATES_API,
+        HACKERRANK_HEADERS,
+    )
 
-        if rating_match:
+    entries = (
+        certificates.get("data")
+        if isinstance(certificates, dict)
+        else None
+    )
 
-            result["rating"] = number(
-                rating_match.group(1)
+    if isinstance(entries, list):
+
+        passed = [
+            entry
+            for entry in entries
+            if isinstance(entry, dict)
+            and (entry.get("attributes") or {}).get(
+                "status"
             )
+            == "test_passed"
+        ]
 
-        rank_match = re.search(
-            r"(?:Global Rank|Rank)\s*:?\s*#?\s*([\d,]+)",
-            text,
-            re.I,
+        put(
+            result,
+            "certifications",
+            len(passed) or None,
         )
-
-        if rank_match:
-
-            result["rank"] = number(
-                rank_match.group(1)
-            )
-
-        if result:
-            break
 
     set_status(
         "hackerrank",
         "direct",
         bool(result),
         (
-            "HackerRank public profile scraper. "
-            "Codolio fills fields that are not "
-            "publicly available."
+            "HackerRank public badges and certificate APIs. "
+            "HackerRank exposes no contest rating, so stars and "
+            "badges are reported instead."
         ),
     )
 
@@ -1505,6 +1333,13 @@ FIELDS = [
     "easySolved",
     "mediumSolved",
     "hardSolved",
+    "repositories",
+    "followers",
+    "following",
+    "stars",
+    "forks",
+    "badgesEarned",
+    "certifications",
 ]
 
 
