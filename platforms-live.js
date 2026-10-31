@@ -350,10 +350,10 @@
 
 
         setValue(
-            "github-followers",
+            "github-contributions",
             getPlatformValue(
                 github,
-                "followers"
+                "contributions"
             )
         );
 
@@ -516,7 +516,7 @@
         "codechef-solved", "codechef-rating", "codechef-max-rating", "codechef-rank",
         "codeforces-solved", "codeforces-rating", "codeforces-max-rating", "codeforces-rank",
         "hackerrank-solved", "hackerrank-badges", "hackerrank-certifications", "hackerrank-rank",
-        "github-repos", "github-followers", "github-stars", "github-forks",
+        "github-repos", "github-contributions", "github-stars", "github-forks",
         "codolio-score", "codolio-rank", "codolio-solved",
     ];
 

@@ -1224,6 +1224,40 @@ output["platforms"]["hackerrank"]["direct"] = (
 # GITHUB
 # ============================================================
 
+GITHUB_CONTRIBUTIONS_URL = (
+    "https://github.com/users/"
+    f"{GITHUB_USERNAME}/contributions"
+)
+
+
+def github_contributions():
+
+    # The REST API never exposes the "contributions in the last
+    # year" figure, so it is summed from the server-rendered
+    # activity calendar, which labels every day cell once.
+    html = get_text(
+        GITHUB_CONTRIBUTIONS_URL,
+        {"Accept": "text/html"},
+    )
+
+    if not html:
+        return None
+
+    labels = re.findall(
+        r">\s*([\d,]+|No) contributions? on ",
+        html,
+    )
+
+    if not labels:
+        return None
+
+    return sum(
+        int(label.replace(",", ""))
+        for label in labels
+        if label != "No"
+    )
+
+
 def load_github():
 
     result = {}
@@ -1251,21 +1285,11 @@ def load_github():
             ),
         )
 
-        put(
-            result,
-            "followers",
-            profile.get(
-                "followers"
-            ),
-        )
-
-        put(
-            result,
-            "following",
-            profile.get(
-                "following"
-            ),
-        )
+    put(
+        result,
+        "contributions",
+        github_contributions(),
+    )
 
     repositories = get_json(
         f"https://api.github.com/users/"
@@ -1307,7 +1331,7 @@ def load_github():
         "github",
         "direct",
         bool(result),
-        "Official GitHub REST API.",
+        "GitHub REST API + activity calendar.",
     )
 
     return result
@@ -1334,8 +1358,7 @@ FIELDS = [
     "mediumSolved",
     "hardSolved",
     "repositories",
-    "followers",
-    "following",
+    "contributions",
     "stars",
     "forks",
     "badgesEarned",
