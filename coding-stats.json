@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T11:38:53.976087+00:00",
+  "updatedAt": "2026-11-03T19:06:38.797465+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -21,7 +21,7 @@
     },
     "codeforces": {
       "direct": {
-        "ok": true,
+        "ok": false,
         "message": "Official Codeforces API."
       }
     },
@@ -41,7 +41,7 @@
   "codolio": {
     "totalProblems": 2426,
     "cScore": 792,
-    "globalRank": 1282
+    "globalRank": 1284
   },
   "platforms": {
     "leetcode": {
@@ -90,12 +90,7 @@
       }
     },
     "codeforces": {
-      "direct": {
-        "rating": 993,
-        "maxRating": 1071,
-        "rank": "newbie",
-        "totalSolved": 323
-      },
+      "direct": {},
       "codolio": {
         "totalSolved": 323,
         "rating": 993,
@@ -111,7 +106,7 @@
     },
     "hackerrank": {
       "direct": {
-        "rank": 236386,
+        "rank": 236395,
         "totalSolved": 129,
         "badgesEarned": 5,
         "certifications": 3
@@ -121,7 +116,7 @@
       },
       "final": {
         "totalSolved": 129,
-        "rank": 236386,
+        "rank": 236395,
         "badgesEarned": 5,
         "certifications": 3
       }
