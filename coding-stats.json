@@ -1,6 +1,5 @@
 {
-
-  "updatedAt": "2026-11-01T01:52:24.788911+00:00",
+  "updatedAt": "2026-11-05T08:59:19.974677+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -40,34 +39,33 @@
     }
   },
   "codolio": {
-    "totalProblems": 2424,
-    "cScore": 792,
-
-    "globalRank": 1284
+    "totalProblems": 2427,
+    "cScore": 793,
+    "globalRank": 1272
   },
   "platforms": {
     "leetcode": {
       "direct": {
-        "totalSolved": 930,
-        "easySolved": 379,
+        "totalSolved": 933,
+        "easySolved": 382,
         "mediumSolved": 521,
         "hardSolved": 30,
-        "rank": 44771,
+        "rank": 44616,
         "rating": 1893,
         "maxRating": 1923
       },
       "codolio": {
-        "totalSolved": 930,
+        "totalSolved": 932,
         "rating": 1893,
         "maxRating": 1923,
         "rank": 42505
       },
       "final": {
-        "totalSolved": 930,
+        "totalSolved": 933,
         "rating": 1893,
         "maxRating": 1923,
-        "rank": 44771,
-        "easySolved": 379,
+        "rank": 44616,
+        "easySolved": 382,
         "mediumSolved": 521,
         "hardSolved": 30
       }
@@ -76,19 +74,19 @@
       "direct": {
         "totalSolved": 1042,
         "maxRating": 1610,
-        "rating": 1578,
-        "rank": 17968
+        "rating": 1580,
+        "rank": 17652
       },
       "codolio": {
         "totalSolved": 1042,
-        "rating": 1578,
+        "rating": 1580,
         "maxRating": 1610
       },
       "final": {
         "totalSolved": 1042,
-        "rating": 1578,
+        "rating": 1580,
         "maxRating": 1610,
-        "rank": 17968
+        "rank": 17652
       }
     },
     "codeforces": {
@@ -113,7 +111,7 @@
     },
     "hackerrank": {
       "direct": {
-        "rank": 236328,
+        "rank": 236440,
         "totalSolved": 129,
         "badgesEarned": 5,
         "certifications": 3
@@ -123,7 +121,7 @@
       },
       "final": {
         "totalSolved": 129,
-        "rank": 236328,
+        "rank": 236440,
         "badgesEarned": 5,
         "certifications": 3
       }
@@ -131,15 +129,15 @@
     "github": {
       "direct": {
         "repositories": 18,
-        "contributions": 350,
-        "stars": 37,
+        "contributions": 361,
+        "stars": 35,
         "forks": 0
       },
       "codolio": {},
       "final": {
         "repositories": 18,
-        "contributions": 350,
-        "stars": 37,
+        "contributions": 361,
+        "stars": 35,
         "forks": 0
       }
     }
