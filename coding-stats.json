@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T14:05:26.758380+00:00",
+  "updatedAt": "2026-11-08T18:57:03.910712+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -39,34 +39,34 @@
     }
   },
   "codolio": {
-    "totalProblems": 2435,
-    "cScore": 793,
-    "globalRank": 1244
+    "totalProblems": 2436,
+    "cScore": 794,
+    "globalRank": 1240
   },
   "platforms": {
     "leetcode": {
       "direct": {
-        "totalSolved": 939,
+        "totalSolved": 940,
         "easySolved": 383,
-        "mediumSolved": 526,
+        "mediumSolved": 527,
         "hardSolved": 30,
         "rank": 43710,
         "rating": 1854,
         "maxRating": 1923
       },
       "codolio": {
-        "totalSolved": 939,
+        "totalSolved": 940,
         "rating": 1854,
         "maxRating": 1923,
         "rank": 55582
       },
       "final": {
-        "totalSolved": 939,
+        "totalSolved": 940,
         "rating": 1854,
         "maxRating": 1923,
         "rank": 43710,
         "easySolved": 383,
-        "mediumSolved": 526,
+        "mediumSolved": 527,
         "hardSolved": 30
       }
     },
@@ -111,7 +111,7 @@
     },
     "hackerrank": {
       "direct": {
-        "rank": 236500,
+        "rank": 236503,
         "totalSolved": 129,
         "badgesEarned": 5,
         "certifications": 3
@@ -121,7 +121,7 @@
       },
       "final": {
         "totalSolved": 129,
-        "rank": 236500,
+        "rank": 236503,
         "badgesEarned": 5,
         "certifications": 3
       }
