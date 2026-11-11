@@ -753,10 +753,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     const result =
                         await response.json();
 
-                    if (!response.ok) {
+                    /* FormSubmit answers HTTP 200 even when it
+                       refuses the message, so response.ok alone
+                       is not enough to prove delivery. */
+                    if (
+                        !response.ok ||
+                        result.success === false ||
+                        result.success === "false"
+                    ) {
                         throw new Error(
                             result.message ||
-                            "Failed to send message"
+                            result.error ||
+                            "The message was not delivered."
                         );
                     }
 
