@@ -2187,7 +2187,10 @@ if (
             status: "Live — deployed on Render",
             live: "https://ai-phishing-detector-tnlt.onrender.com/",
             github: "https://github.com/nihalhussain555/AI-Phishing-Detector.git",
-            screenshots: [],
+            screenshots: [
+                "images/projects/phishing/01-scanner.png",
+                "images/projects/phishing/02-qr.png"
+            ],
 
             description:
                 "An AI-powered cybersecurity and fact-verification platform that screens suspicious URLs, QR codes, emails, and online claims — combining machine-learning classification, live page analysis, and LLM reasoning into a single verification workflow.",
@@ -2299,7 +2302,9 @@ if (
             status: "Live — deployed on Vercel",
             live: "https://campus-clubs-events-management.vercel.app/",
             github: "https://github.com/nihalhussain555/Campus_Clubs_Events_Management.git",
-            screenshots: [],
+            screenshots: [
+                "images/projects/clubs/01-home.png"
+            ],
 
             description:
                 "A MERN-stack college platform that centralises campus life — students discover clubs, register for events, and track participation, while administrators run clubs, publish announcements, and monitor engagement from an analytics dashboard.",
