@@ -4114,7 +4114,7 @@ body.project-modal-lock {
 
     padding: 5vh 0;
 
-    background: rgba(3, 3, 8, .68);
+    background: rgba(5, 5, 12, .6);
 
     backdrop-filter: blur(16px) saturate(140%);
     -webkit-backdrop-filter: blur(16px) saturate(140%);
@@ -4136,6 +4136,10 @@ body.project-modal-lock {
     --pm-a1: #8b5cf6;
     --pm-a2: #38bdf8;
 
+    --pm-surface: #15151b;
+    --pm-body: #ccccd6;
+    --pm-dim: #a7a7b3;
+
     width: 90vw;
     max-width: 1440px;
     max-height: 90vh;
@@ -4145,8 +4149,8 @@ body.project-modal-lock {
 
     background: linear-gradient(
         165deg,
-        var(--card),
-        rgba(139, 92, 246, .05)
+        var(--pm-surface),
+        rgba(139, 92, 246, .09)
     );
 
     border: 1px solid var(--border-purple);
@@ -4173,6 +4177,12 @@ body.project-modal-lock {
     opacity: 1;
 }
 
+body.light .pm-modal {
+    --pm-surface: #ffffff;
+    --pm-body: #45454d;
+    --pm-dim: #5f5f68;
+}
+
 /* ---------------- HEADER ---------------- */
 
 .pm-head {
@@ -4185,7 +4195,7 @@ body.project-modal-lock {
 
     padding: 16px 26px;
 
-    background: var(--card);
+    background: var(--pm-surface);
 
     border-bottom: 1px solid var(--border);
 }
@@ -4560,7 +4570,7 @@ body.light .pm-cover-title {
 }
 
 .pm-desc {
-    color: var(--muted-light);
+    color: var(--pm-body);
 
     font-size: 13px;
 
@@ -4681,7 +4691,7 @@ body.light .pm-cover-title {
 
     padding-top: 6px;
 
-    color: var(--muted);
+    color: var(--pm-dim);
 
     font-size: 10px;
 
@@ -4770,7 +4780,7 @@ body.light .pm-cover-title {
 }
 
 .pm-para {
-    color: var(--muted-light);
+    color: var(--pm-body);
 
     font-size: 12.5px;
 
@@ -4798,7 +4808,7 @@ body.light .pm-cover-title {
 
     gap: 12px;
 
-    color: var(--muted-light);
+    color: var(--pm-body);
 
     font-size: 12.5px;
 
@@ -4836,8 +4846,8 @@ body.light .pm-cover-title {
 
     background: linear-gradient(
         150deg,
-        rgba(139, 92, 246, .06),
-        rgba(139, 92, 246, .015)
+        rgba(139, 92, 246, .1),
+        rgba(139, 92, 246, .03)
     );
 
     transition: var(--transition);
@@ -4870,7 +4880,7 @@ body.light .pm-cover-title {
 }
 
 .pm-feature-card p {
-    color: var(--muted);
+    color: var(--pm-dim);
 
     font-size: 11px;
 
@@ -4928,7 +4938,7 @@ body.light .pm-cover-title {
 }
 
 .pm-tech-purpose {
-    color: var(--muted-light);
+    color: var(--pm-body);
 
     font-size: 12px;
 
@@ -4968,7 +4978,7 @@ body.light .pm-cover-title {
 
     border: 1px solid var(--border);
 
-    background: rgba(255, 255, 255, .025);
+    background: rgba(255, 255, 255, .055);
 }
 
 .pm-flow-label {
@@ -4999,7 +5009,7 @@ body.light .pm-cover-title {
 
     border: 1px solid var(--border);
 
-    color: var(--muted-light);
+    color: var(--pm-body);
 
     font-size: 10.5px;
 
@@ -5102,7 +5112,7 @@ body.light .pm-cover-title {
 }
 
 .pm-step p {
-    color: var(--muted);
+    color: var(--pm-dim);
 
     font-size: 11.5px;
 
@@ -5162,7 +5172,7 @@ body.light .pm-cover-title {
 }
 
 .pm-ch-q p {
-    color: var(--muted-light);
+    color: var(--pm-body);
 }
 
 .pm-ch-a {
@@ -5174,7 +5184,7 @@ body.light .pm-cover-title {
 }
 
 .pm-ch-a p {
-    color: var(--muted-light);
+    color: var(--pm-body);
 }
 
 /* ---------------- LIGHTBOX ---------------- */
