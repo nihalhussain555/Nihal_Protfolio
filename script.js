@@ -1958,7 +1958,10 @@ if (
             status: "Live — deployed on Vercel",
             live: "https://civicai-theta.vercel.app/",
             github: "https://github.com/nihalhussain555/CivicAI_Nexus.git",
-            screenshots: [],
+            screenshots: [
+                "images/projects/civicai/01-home.png",
+                "images/projects/civicai/02-features.png"
+            ],
 
             description:
                 "An AI-powered government grievance management platform where citizens report civic issues in text, voice, or photos, while administrators get an intelligent backend that classifies, routes, prioritises, and tracks every complaint through to resolution.",
@@ -2073,7 +2076,10 @@ if (
             status: "Live — deployed on Vercel",
             live: "https://launch-crew-gray.vercel.app/",
             github: "https://github.com/nihalhussain555/Launch-Crew.git",
-            screenshots: [],
+            screenshots: [
+                "images/projects/launchcrew/01-home.png",
+                "images/projects/launchcrew/02-workflow.png"
+            ],
 
             description:
                 "An agentic AI platform that turns a plain-language idea into a production website: specialised AI agents plan the structure, generate content and code, render a live preview, and carry the project through deployment in one streamlined workflow.",
