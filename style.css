@@ -4183,6 +4183,104 @@ body.light .pm-modal {
     --pm-dim: #5f5f68;
 }
 
+/* =========================================================
+   PROJECTS SECTION — LIGHT THEME BRIGHTNESS
+========================================================= */
+
+body.light #projects {
+
+    background:
+        radial-gradient(
+            900px 420px at 85% 0%,
+            rgba(139, 92, 246, .08),
+            transparent 60%
+        ),
+        radial-gradient(
+            700px 380px at 0% 100%,
+            rgba(109, 40, 217, .05),
+            transparent 60%
+        ),
+        #fdfdff;
+
+    border-radius: 24px;
+}
+
+body.light .project-card {
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f7f3ff
+    );
+
+    border-color: rgba(109, 40, 217, .14);
+
+    box-shadow:
+        0 12px 32px rgba(40, 25, 80, .06);
+}
+
+body.light .project-card:hover {
+    border-color: rgba(139, 92, 246, .45);
+
+    box-shadow:
+        0 28px 60px rgba(90, 60, 180, .16);
+}
+
+body.light .featured-project {
+    border-color: rgba(139, 92, 246, .3);
+}
+
+body.light .project-card p {
+    color: #55555f;
+}
+
+body.light .project-category {
+    color: var(--purple-dark);
+}
+
+body.light .project-number {
+    color: #a2a2ad;
+}
+
+body.light .project-arrow {
+    color: #8a8a94;
+}
+
+body.light .project-card:hover .project-arrow {
+    color: var(--purple-dark);
+}
+
+body.light .project-features span {
+    background: #faf7ff;
+
+    border-color: rgba(109, 40, 217, .16);
+
+    color: #3f3f48;
+}
+
+body.light .project-tech span {
+    background: rgba(139, 92, 246, .09);
+
+    color: #5b5566;
+}
+
+body.light .project-links {
+    border-top-color: rgba(109, 40, 217, .14);
+}
+
+body.light .project-links a {
+    color: #1c1c22;
+}
+
+body.light .project-links a:hover {
+    color: var(--purple-dark);
+}
+
+body.light .project-card[data-project-id]::after {
+    box-shadow:
+        0 18px 44px rgba(90, 60, 180, .3),
+        0 0 30px rgba(139, 92, 246, .25);
+}
+
 /* ---------------- HEADER ---------------- */
 
 .pm-head {
