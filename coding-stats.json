@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T09:35:57.080489+00:00",
+  "updatedAt": "2026-11-21T17:07:27.946085+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -41,7 +41,7 @@
   "codolio": {
     "totalProblems": 2449,
     "cScore": 798,
-    "globalRank": 1083
+    "globalRank": 1069
   },
   "platforms": {
     "leetcode": {
@@ -50,7 +50,7 @@
         "easySolved": 387,
         "mediumSolved": 528,
         "hardSolved": 30,
-        "rank": 43177,
+        "rank": 43205,
         "rating": 1882,
         "maxRating": 1923
       },
@@ -58,13 +58,13 @@
         "totalSolved": 945,
         "rating": 1882,
         "maxRating": 1923,
-        "rank": 45812
+        "rank": 45909
       },
       "final": {
         "totalSolved": 945,
         "rating": 1882,
         "maxRating": 1923,
-        "rank": 43177,
+        "rank": 43205,
         "easySolved": 387,
         "mediumSolved": 528,
         "hardSolved": 30
@@ -79,7 +79,7 @@
       },
       "codolio": {
         "totalSolved": 1046,
-        "rating": 1542,
+        "rating": 1544,
         "maxRating": 1610
       },
       "final": {
@@ -111,7 +111,7 @@
     },
     "hackerrank": {
       "direct": {
-        "rank": 236897,
+        "rank": 236904,
         "totalSolved": 129,
         "badgesEarned": 5,
         "certifications": 3
@@ -121,7 +121,7 @@
       },
       "final": {
         "totalSolved": 129,
-        "rank": 236897,
+        "rank": 236904,
         "badgesEarned": 5,
         "certifications": 3
       }
@@ -129,14 +129,14 @@
     "github": {
       "direct": {
         "repositories": 19,
-        "contributions": 441,
+        "contributions": 443,
         "stars": 35,
         "forks": 0
       },
       "codolio": {},
       "final": {
         "repositories": 19,
-        "contributions": 441,
+        "contributions": 443,
         "stars": 35,
         "forks": 0
       }
