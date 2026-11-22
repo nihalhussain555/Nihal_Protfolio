@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T17:58:37.615728+00:00",
+  "updatedAt": "2026-11-22T23:31:21.753534+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -111,7 +111,7 @@
     },
     "hackerrank": {
       "direct": {
-        "rank": 236928,
+        "rank": 236930,
         "totalSolved": 129,
         "badgesEarned": 5,
         "certifications": 3
@@ -121,7 +121,7 @@
       },
       "final": {
         "totalSolved": 129,
-        "rank": 236928,
+        "rank": 236930,
         "badgesEarned": 5,
         "certifications": 3
       }
