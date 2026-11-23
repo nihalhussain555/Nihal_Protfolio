@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T05:55:42.448172+00:00",
+  "updatedAt": "2026-11-23T17:32:52.826457+00:00",
   "sourceStatus": {
     "codolio": {
       "public": {
@@ -50,7 +50,7 @@
         "easySolved": 388,
         "mediumSolved": 528,
         "hardSolved": 30,
-        "rank": 43096,
+        "rank": 43125,
         "rating": 1882,
         "maxRating": 1923
       },
@@ -64,7 +64,7 @@
         "totalSolved": 946,
         "rating": 1882,
         "maxRating": 1923,
-        "rank": 43096,
+        "rank": 43125,
         "easySolved": 388,
         "mediumSolved": 528,
         "hardSolved": 30
@@ -111,7 +111,7 @@
     },
     "hackerrank": {
       "direct": {
-        "rank": 236931,
+        "rank": 236948,
         "totalSolved": 129,
         "badgesEarned": 5,
         "certifications": 3
@@ -121,7 +121,7 @@
       },
       "final": {
         "totalSolved": 129,
-        "rank": 236931,
+        "rank": 236948,
         "badgesEarned": 5,
         "certifications": 3
       }
